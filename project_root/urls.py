@@ -16,11 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from christmas import views as christmas_views
 
 
 urlpatterns = [
+    path("", include("christmas.urls"), name="christmas-urls"),
     path('admin/', admin.site.urls),
-    path('', christmas_views.index, name='index'),
-   
 ]
