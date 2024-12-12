@@ -30,10 +30,14 @@ SECRET_KEY = 'django-insecure-r_ty77vq_#07^nasx5ur$%6)#%9@z&3mqy9(m)$mqpv@%u5gkq
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '.codeinstitute-ide.net'
-    ,'.herokuapp.com'
+    'localhost',
+    '127.0.0.1'
     ]
 
+# Heroku URL
+heroku_url = os.environ.get('HEROKU_URL')
+if heroku_url:
+    ALLOWED_HOSTS.append(heroku_url)
 
 # Application definition
 
