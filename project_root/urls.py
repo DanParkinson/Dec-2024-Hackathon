@@ -22,3 +22,5 @@ urlpatterns = [
     path("", include("christmas.urls"), name="christmas-urls"),
     path('admin/', admin.site.urls),
 ]
+
+
