@@ -55,7 +55,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'christmas'
+    'cloudinary_storage',
+    'cloudinary',
+    'christmas',
 ]
 
 MIDDLEWARE = [
