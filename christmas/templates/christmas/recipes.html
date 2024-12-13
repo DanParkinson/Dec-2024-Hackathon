@@ -17,11 +17,11 @@
                     <p>No image available.</p>
                 {% endif %}
                 <p>{{ recipe.description }}</p>
+                <a href="../detail/{{recipe.id}}" class="btn btn-lg col-md-6 reservation-card-btn">Recipe detail</a>
             </li>
             {% empty %}
             <li>No recipes available.</li>
             {% endfor %}
-
         </div>
     </div>
 </div>
