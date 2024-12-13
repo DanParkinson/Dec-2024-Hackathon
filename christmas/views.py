@@ -14,8 +14,10 @@ def recipes(request):
 def recipe_detail(request, id):
     """Renders details of a single recipe to recipie_detail.html"""
     recipe = get_object_or_404(Recipe, id=id)
+    recipes_list = Recipe.objects.all()
     context = {
-        'recipe': recipe
+        'recipe': recipe,
+        'recipes_list': recipes_list
     }
 
     return render(
