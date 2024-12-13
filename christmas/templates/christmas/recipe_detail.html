@@ -16,4 +16,27 @@
     </div>
 </div>
 
+
+<!-- All Recipes displayed here-->
+<div class="row">
+    <div class="col">
+        <div class="card-body">
+            {% for recipe in recipes %}
+            <li>
+                <h3>{{ recipe.title }}</h3>
+                {% if recipe.image %}
+                    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}">
+                {% else %}
+                    <p>No image available.</p>
+                {% endif %}
+                <p>{{ recipe.description }}</p>
+                <a href="../detail/{{recipe.id}}" class="btn btn-lg col-md-6 reservation-card-btn">Recipe detail</a>
+            </li>
+            {% empty %}
+            <li>No recipes available.</li>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
 {% endblock %}
