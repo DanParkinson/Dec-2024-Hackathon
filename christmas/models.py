@@ -11,8 +11,8 @@ class Recipe(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE
     )
-    title = models.CharField(max_length=200, unique=True)
-    description = models.SlugField(max_length=200, unique=True)
+    title = models.CharField(max_length=100, unique=True)
+    description = models.TextField(max_length=100, unique=True)
     ingredients = models.TextField()
     instructions = models.TextField()
     image = CloudinaryField('image', default='placeholder')
