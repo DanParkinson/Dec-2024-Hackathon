@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card mt-5">
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2 class="text-center fw-bold">Verify Your Email</h2>
+                        <div class="text-center mt-4">
+                            <p>We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process.</p>
+                            <p>Please contact us if you do not receive it within a few minutes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-3">
+                    <a href="{% url 'account_login' %}" class="btn btn-dark">Return to Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
