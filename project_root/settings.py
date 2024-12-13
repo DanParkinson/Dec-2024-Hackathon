@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'christmas',
     'home',
+    'profiles',
 ]
 
 
