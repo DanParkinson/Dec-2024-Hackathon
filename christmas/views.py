@@ -5,17 +5,14 @@ from .models import Recipe
 
 
 # Create your views here.
-def index(request):
-    return render(request, 'christmas/index.html')
-
-def about(request):
-    return render(request, 'christmas/about.html')
 
 def recipes(request):
+    "Render list of recipies to the recipies.html page"
     recipes_list = Recipe.objects.all()
     return render(request, 'christmas/recipes.html', {'recipes': recipes_list})
 
 def recipe_detail(request, id):
+    """Renders details of a single recipe to recipie_detail.html"""
     recipe = get_object_or_404(Recipe, id=id)
     context = {
         'recipe': recipe
