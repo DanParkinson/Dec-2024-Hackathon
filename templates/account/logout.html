@@ -1,0 +1,16 @@
+{% extends "base.html" %}  <!-- Extends your site's base template -->
+
+{% block title %}Confirm Logout{% endblock %}
+
+{% block content %}
+<div class="logout-container">
+    <h1>Are you sure you want to log out?</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Yes, Log Out</button>
+    </form>
+
+    <p><a href="/">Cancel</a></p>
+</div>
+{% endblock %}

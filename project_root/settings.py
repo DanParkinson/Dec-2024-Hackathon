@@ -64,7 +64,9 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'christmas',
     'home',
+    'profiles',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -167,6 +169,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
