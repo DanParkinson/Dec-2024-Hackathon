@@ -6,6 +6,11 @@ from .models import Recipe
 
 # Create your views here.
 
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'christmas/index.html')
+
 def recipes(request):
     "Render list of recipies to the recipies.html page"
     recipes_list = Recipe.objects.all()
