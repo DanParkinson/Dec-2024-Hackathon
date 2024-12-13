@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from django.http import HttpResponse
+from .models import Recipe
 
 
 # Create your views here.
@@ -11,4 +12,5 @@ def about(request):
     return render(request, 'christmas/about.html')
 
 def recipes(request):
-    return render(request, 'christmas/recipes.html')
+    recipes_list = Recipe.objects.all()
+    return render(request, 'christmas/recipes.html', {'recipes': recipes_list})
