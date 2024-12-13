@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h1>{{ recipe.title }}</h1>
+        {% if recipe.image %}
+                    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}">
+                {% else %}
+                    <p>No image available.</p>
+                {% endif %}
+                <p>{{ recipe.description }}</p>
+                <p>{{ recipe.ingredients }}</p>
+                <p>{{ recipe.instructions }}</p>
+    </div>
+</div>
+
+{% endblock %}
