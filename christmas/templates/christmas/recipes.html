@@ -2,5 +2,29 @@
 {% load static %}
 
 {% block content %}
-<h1>Recepies page.</h1>
+<h1>Recipes page</h1>
+
+<!--Recipes displayed here-->
+<div class="row gy-5">
+    <div class="col">
+        <div class="card-body">
+            {% for recipe in recipes %}
+            <li>
+                <h3>{{ recipe.title }}</h3>
+                {% if recipe.image %}
+                    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}">
+                {% else %}
+                    <p>No image available.</p>
+                {% endif %}
+                <p>{{ recipe.description }}</p>
+            </li>
+            {% empty %}
+            <li>No recipes available.</li>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}
