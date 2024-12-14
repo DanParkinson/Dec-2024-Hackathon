@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
 from django.contrib import messages
 from .models import Recipe
 from .forms import RecipeForm
@@ -87,3 +88,15 @@ def delete_recipe(request, id):
         return redirect('recipe_detail', id=recipe.id)
     
     return render(request, 'christmas/delete_recipe.html', {'recipe': recipe})
+
+# Dan - users can toggle favourites
+@login_required
+def toggle_favourite(request, id):
+    """Toggle a recipe as a favourite for the logged-in user."""
+    recipe = get_object_or_404(Recipe, id=id)
+    if recipe.favourites.filter(id=request.user.id).exists():
+        recipe.favourites.remove(request.user)
+    else:
+        recipe.favourites.add(request.user)
+    # Redirect back to the previous page
+    return redirect(request.META.get('HTTP_REFERER', '/'))
