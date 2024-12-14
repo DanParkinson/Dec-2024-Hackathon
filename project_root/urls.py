@@ -26,4 +26,3 @@ urlpatterns = [
     path('profiles/', include('profiles.urls')),
     path('summernote/', include('django_summernote.urls')),
 ]
-
