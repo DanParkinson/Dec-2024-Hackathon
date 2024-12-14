@@ -20,6 +20,7 @@ class Recipe(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    favourites = models.ManyToManyField(User, related_name='favourite_recipes', blank=True)
 
     def get_ingredients_list(self):
         """

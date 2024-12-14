@@ -16,6 +16,13 @@ def logout_confirmation(request):
 # Dan - users can view own profile
 @login_required
 def profile_view(request):
+    """render profile information """
     user = request.user # get currently logged in user
     recipes = Recipe.objects.filter(author=user) # fetch recipes created by user
-    return render(request, 'profiles/profile.html', {'user':user, 'recipes':recipes})
+    favourite_recipes = user.favourite_recipes.all()  # fetch Recipes favourited by the user
+    return render(request, 'profiles/profile.html', {
+        'user':user,
+        'recipes':recipes,
+        'favourite_recipes': favourite_recipes,})
+
+
