@@ -22,6 +22,25 @@ class Recipe(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     favourites = models.ManyToManyField(User, related_name='favourite_recipes', blank=True)
 
+    def get_ingredients_list(self):
+        """
+        Return ingredients as a list, 
+        separated each ingredient by newline
+        """
+        return [
+            ing.strip() for ing in self.ingredients.split('\n') if ing.strip()
+        ]
+
+    def get_instructions_list(self):
+        """
+        Returns instructions as a list ,
+        splitting by 'step' markers
+        """
+        steps = [
+            step.strip() for step in self.instructions.split('step') if step.strip()
+        ]
+        return [step.split('.', 1)[-1].strip() for step in steps]
+
     class Meta:
         """ 
         Orders recipies by:
