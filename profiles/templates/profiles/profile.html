@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}User Profile{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <h1>Welcome, {{ user.get_full_name|default:user.username }}</h1>
+    <p><strong>Email:</strong> {{ user.email|default:"Not provided" }}</p>
+
+    <div class="profile-actions">
+        <a href="#" class="btn btn-primary">View My Recipes</a>
+        <a href="#" class="btn btn-secondary">View Favourite Recipes</a>
+    </div>
+</div>
+{% endblock %}
