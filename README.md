@@ -55,11 +55,26 @@ Also being able share their recipes with other users.
 
 ### Users
 In order to fully understand our users' needs, we asked Microsoft Co-pilot to draw up some user personas based on our project brief. We refined the prompts and after three tries and some refinement afterwards, here are the personas we used:
-- Persona 1: "
+- Persona 1: "Emily Johnson is a 32-year-old teacher from Leeds"<br>
+  She loves discovering new Christmas dessert recipes to make for her family and friends during the holiday season.<br>
+  Emily wants a website where she can easily find and save her favorite recipes to try later. She also enjoys sharing her own baking creations with the community.<br>
+  However, she often gets frustrated with hard-to-follow recipe instructions and the lack of ratings and reviews to gauge the quality of the recipes.<br>
+  Emily appreciates detailed recipe instructions, the ability to save favorite recipes, and the option to share recipes on social media.<br>
+  She values easy-to-use search functionality and high-quality images for each recipe to help her decide what to make.
 
-- Persona 2: "
+- Persona 2: "Michael Williams is a 45-year-old software engineer living in Brighton"<br>
+  Michael follows a vegetarian diet and is always on the lookout for new vegetarian Christmas recipes.<br>
+  He likes to post and share his main course recipes with the community and enjoys engaging with other users by commenting and rating recipes.<br>
+  Michael sometimes finds it difficult to find recipes that suit his dietary preferences and wishes there were more interaction opportunities within the community.<br>
+  His favorite features include the ability to filter recipes by dietary preferences, post and manage his own recipes, and comment and rate other recipes.<br>
+  Michael also appreciates receiving notifications for recipe interactions and having access to analytics to track the popularity of his recipes.
 
-- Persona 3: "
+- Persona 3: "Sarah Smith is a 28-year-old digital marketer from Cardiff"<br>
+  She often hosts Christmas parties and is always on the hunt for quick and easy appetizer recipes.
+  Sarah wants a website where she can save and organize her favorite recipes in her profile. She also enjoys personalizing her account by adding a profile photo and bio.<br>
+  Sarah sometimes feels overwhelmed by the sheer number of recipes available without proper organization and wishes there were more ways to filter recipes by cooking time.<br>
+  Her favorite features include browsing recipes by category, personalizing her user profile with a photo and bio, and saving and organizing favorite recipes.<br>
+  Additionally, Sarah values the ability to filter recipes by cooking time and having easy-to-read formats for recipe instructions.
 
 ## Project Plan
 Initially the group got together when the team was known after the first webinar. A repository was created and colaborators were adeed to allow different members to create their branches and work locally, as necessary.
