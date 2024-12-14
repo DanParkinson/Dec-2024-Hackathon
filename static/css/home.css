@@ -167,6 +167,10 @@
     margin-bottom: 20px;
   }
   
+.card-recipe {
+  min-height: 40vh;
+}
+
   .new-card {
     width: 80%; /* Set width to 80% for consistency */
     margin: 0 auto; /* Center the card */
