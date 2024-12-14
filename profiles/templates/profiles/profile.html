@@ -22,6 +22,7 @@
                         <!-- {% url 'delete_recipe' recipe.id %} -->
                         <a href="#" class="btn btn-danger">Delete</a>
                     </div>
+                    
                 </div>
             </div>
         {% endfor %}
@@ -40,6 +41,10 @@
                         <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="recipe-image">
                         <h3>{{ recipe.title }}</h3>
                     </a>
+                    <button 
+                        class="btn unfavorite-btn" 
+                        data-recipe-id="{{ recipe.id }}">Unfavorite</button>
+                </div>
                 </div>
             {% endfor %}
         </div>
