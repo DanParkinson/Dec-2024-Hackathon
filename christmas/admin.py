@@ -1,7 +1,15 @@
 from django.contrib import admin
-
-# Register your models here.
 from .models import Recipe
+from django_summernote.admin import SummernoteModelAdmin
+
 
 # Register your models here.
-admin.site.register(Recipe)
+@admin.register(Recipe)
+class RecipeAdmin(SummernoteModelAdmin):
+
+    list_display = ('author',
+                    'status',
+                    'title',)
+    search_fields = ['author', 'status']
+    list_filter = ('author', 'status')
+
