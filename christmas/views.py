@@ -1,21 +1,51 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.contrib import messages
-from .models import Recipe
+from .models import Recipe, CATEGORY_CHOICES
 from .forms import RecipeForm
-from django.db.models import Count
+from django.db.models import Q, Count
 
 
 def recipes(request):
     "Render list of recipies to the recipies.html page"
-    recipes_list = Recipe.objects.all().annotate(favourites_count=Count('favourites')) # Dan edit - to display faves
-    return render(
-        request,
-        'christmas/recipes.html',
-        {'recipes': recipes_list}
-    )
+    recipes_list = Recipe.objects.all().annotate(favourites_count=Count('favourites'))
+    query = None
+    category = None
+    no_results = False
+
+    if request.GET:
+        # Search Query
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criterial!")
+                return redirect(reverse('recipes'))
+
+            queries = Q(title__icontains=query) | Q(description__icontains=query)
+            recipes_list = recipes_list.filter(queries)
+
+        # Category filtering
+        if 'category' in request.GET:
+            category = request.GET['category']
+            if category:
+                recipes_list = recipes_list.filter(category=category)
+
+    # If there is no result
+    if not recipes_list.exists():
+        no_results = True
+
+    context = {
+        'recipes': recipes_list,
+        'search_term': query,
+        'current_category': category,
+        'category_choices': CATEGORY_CHOICES,
+        'no_results': no_results,
+    }
+
+    return render(request, 'christmas/recipes.html', context)
+
 
 def recipe_detail(request, id):
     """Renders details of a single recipe to recipie_detail.html"""
