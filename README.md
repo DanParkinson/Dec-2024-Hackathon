@@ -54,7 +54,8 @@ The site user's goals for the site are to get information about different Christ
 Also being able share their recipes with other users.
 
 ### Users
-In order to fully understand our users' needs, we asked Microsoft Co-pilot to draw up some user personas based on our project brief. We refined the prompts and after three tries and some refinement afterwards, here are the personas we used:
+In order to fully understand our users needs, we asked Microsoft Co-pilot to draw up some user personas based on our project brief. We refined the prompts and after three tries and some refinement afterwards, here are the personas we used:
+
 - Persona 1: "Emily Johnson is a 32-year-old teacher from Leeds"<br>
   She loves discovering new Christmas dessert recipes to make for her family and friends during the holiday season.<br>
   Emily wants a website where she can easily find and save her favorite recipes to try later. She also enjoys sharing her own baking creations with the community.<br>
@@ -100,7 +101,7 @@ Here are all the user stories that have been prioritised (all must have and some
 | Print or Save Recipes as PDF                    | could have                |   Done  |
 
 
-All user stories were logged on the [Kanban Project Board](https:) on GitHub repo, along with the assessment criteria and expected performance for the Hackathon, which were also prioritised as must-have, should-have and could-have.
+All user stories were logged on the [GitHub Project Board](https://github.com/users/Francisca-Heii/projects/7) on GitHub repo, along with the assessment criteria and expected performance for the Hackathon, which were also prioritised as must-have, should-have and could-have.
 
 As well as using the Project Board to track progress on our project, we also used it during testing to log any significant bugs that need to be fixed before the project deadline. These were then assigned and prioritised alongside other issues and user stories.
 
