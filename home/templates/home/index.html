@@ -2,5 +2,76 @@
 {% load static %}
 
 {% block content %}
-<h1>Index page.</h1>
+<h1>SIMPLE RECIPIES MADE FOR<i>"REAL ACTUAL CHRISTMAS SEASON"!</i></h1>
+<p class="lead text-center mt-4">
+    Discover festive recipes to make your Christmas unforgettable! From cozy starters to indulgent desserts, Jingle Bites brings the magic of the season to your table.
+</p>
+<section class="categories">
+    <div class="container">
+        <div class="row text-center">
+            <!-- Starter -->
+            <div class="col-md-3">
+                <a href="{% url 'recipes' %}?category=starter" class="category-link">
+                    <div class="category-card">
+                        <img src="{% static 'images/starter-home.jpg' %}" alt="Starter" class="category-image img-fluid">
+                        <h2>Starter</h2>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Main -->
+            <div class="col-md-3">
+                <a href="{% url 'recipes' %}?category=main" class="category-link">
+                    <div class="category-card">
+                        <img src="{% static 'images/ham-home.png' %}" alt="Main" class="category-image img-fluid">
+                        <h2>Main</h2>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Side -->
+            <div class="col-md-3">
+                <a href="{% url 'recipes' %}?category=side" class="category-link">
+                    <div class="category-card">
+                        <img src="{% static 'images/side-dish1-home.png' %}" alt="Side" class="category-image img-fluid">
+                        <h2>Side</h2>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Dessert -->
+            <div class="col-md-3">
+                <a href="{% url 'recipes' %}?category=dessert" class="category-link">
+                    <div class="category-card">
+                        <img src="{% static 'images/dessert1-home.png' %}" alt="Dessert" class="category-image img-fluid">
+                        <h2>Dessert</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="recommended-section">
+    <h2 class="text-center my-4">Recommended</h2>
+    <div class="container-fluid">
+        <div class="row text-center justify-content-center">
+            {% if recommended_recipes %}
+                {% for recipe in recommended_recipes %}
+                    <div class="col-3 col-md-1 recommended-area">
+                        <div class="recommended-item">
+                            <a href="{% url 'recipe_detail' recipe.id %}">
+                                <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="recommended-image">
+                                <p class="mt-2">{{ recipe.title }}</p>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p class="text-center">No recommended recipes at the moment. Check back later!</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
 {% endblock %}

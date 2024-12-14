@@ -1,0 +1,58 @@
+.category-card {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.category-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 250px; /* Limit the image width */
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Crop the image to fit the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.category-image:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.recommended-section {
+    margin-top: 40px;
+}
+
+.recommended-item {
+    text-align: center;
+}
+
+.recommended-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Makes the images circular */
+    object-fit: cover; /* Ensures the images fit inside the circle without distortion */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.recommended-image:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.recommended-item p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+.recommended-area {
+    min-width: 100px;
+}
+

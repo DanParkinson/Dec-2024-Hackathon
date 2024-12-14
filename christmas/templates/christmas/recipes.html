@@ -2,29 +2,73 @@
 {% load static %}
 
 {% block content %}
-<h1>Recipes page</h1>
+<h1>SIMPLE RECIPIES MADE FOR<i>"REAL ACTUAL CHRISTMAS SEASON"!</i></h1>
 
-<!--Recipes displayed here-->
-<div class="row gy-5">
-    <div class="col">
-        <div class="card-body">
-            {% for recipe in recipes %}
-            <li>
-                <h3>{{ recipe.title }}</h3>
-                {% if recipe.image %}
-                    <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}">
-                {% else %}
-                    <p>No image available.</p>
-                {% endif %}
-                <p>{{ recipe.description }}</p>
-                <a href="{% url 'recipe_detail' recipe.id %}" class="btn btn-lg col-md-6 reservation-card-btn">Recipe detail</a>
-            </li>
-            {% empty %}
-            <li>No recipes available.</li>
-            {% endfor %}
+<!--Hero Image -->
+<section class="card-section">
+    <div class="new-card-container">
+        <!-- New Card at the top with only image -->
+        <div class="top-card new-card">
+            <div class="card-content">
+                <img src="{% static 'images/first-Container-imge.jpeg' %}" alt="New Card Image" /> 
+            </div>
         </div>
     </div>
-</div>
+</section>
 
+<!-- search bar not functioning-->
+<section>
+    <div class="container mt-4">
+        <form class="row g-3 align-items-center">
+            <!-- Dropdown Menu for Categories -->
+            <div class="col-auto">
+                <select class="form-select" id="categoryDropdown" name="category">
+                    <option selected disabled>Categories</option>
+                    <option value="starter">Starter</option>
+                    <option value="main">Main</option>
+                    <option value="side">Side</option>
+                    <option value="dessert">Dessert</option>
+                </select>
+            </div>
+    
+            <!-- Search Input -->
+            <div class="col-auto">
+                <input type="text" class="form-control" placeholder="Search recipes..." name="search">
+            </div>
+    
+            <!-- Submit Button -->
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- recipes displayed from database -->
+<div class="container mt-4">
+    <div class="row">
+        {% for recipe in recipes %}
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    {% if recipe.image %}
+                        <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-3">
+                    {% else %}
+                        <p>No image available.</p>
+                    {% endif %}
+                    <h3 class="card-title">{{ recipe.title }}</h3>
+                    <div class="card-details mt-2 justify-content-center">
+                        <i class="fas fa-users"></i>
+                        <span> 4 People</span>
+                        <i class="fas fa-clock ms-3"></i>
+                        <span>{{ recipe.cooking_time }}</span>
+                    </div>
+                    <p class="mt-2"><strong>{{ recipe.favourites_count }}</strong> people have favorited this recipe</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}

@@ -5,11 +5,12 @@ from django.http import JsonResponse
 from django.contrib import messages
 from .models import Recipe
 from .forms import RecipeForm
+from django.db.models import Count
 
 
 def recipes(request):
     "Render list of recipies to the recipies.html page"
-    recipes_list = Recipe.objects.all()
+    recipes_list = Recipe.objects.all().annotate(favourites_count=Count('favourites')) # Dan edit - to display faves
     return render(
         request,
         'christmas/recipes.html',
