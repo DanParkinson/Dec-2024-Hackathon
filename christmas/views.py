@@ -42,7 +42,7 @@ def add_recipe(request):
             recipe.author = request.user
             recipe.save()
             messages.success(request, 'Recipe added successfully!')
-            return redirect('detail', id=recipe.id)
+            return redirect('recipe_detail', id=recipe.id)
     else:
         form = RecipeForm()
 
@@ -63,7 +63,7 @@ def edit_recipe(request, id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Recipe updated successfully!')
-            return redirect('detail', id=recipe.id)
+            return redirect('recipe_detail', id=recipe.id)
     else:
         form = RecipeForm(instance=recipe)
     
@@ -85,7 +85,7 @@ def delete_recipe(request, id):
     if request.method == 'POST':
         recipe.delete()
         messages.success(request, 'Recipe deleted successfully!')
-        return redirect('recipe_detail', id=recipe.id)
+        return redirect('recipes')
     
     return render(request, 'christmas/delete_recipe.html', {'recipe': recipe})
 
