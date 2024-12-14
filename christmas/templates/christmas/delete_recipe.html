@@ -8,7 +8,7 @@
         {% csrf_token %}
         <button type="submit" class="btn btn-danger">Yes, Delete</button>
         <!-- change the url to url 'recipe_detail' recipe.id when the recipe detail is ready -->
-        <a href="{% url 'recipes' %}" class="btn btn-secondary">Cancel</a>
+        <a href="{% url 'recipe_detail' recipe.id %}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
 {% endblock %}
