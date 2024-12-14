@@ -70,3 +70,19 @@ def edit_recipe(request, id):
         'form': form,
         'recipe': recipe
     })
+
+
+def delete_recipe(request, id):
+    """Delete a recipe from the database"""
+    recipe = get_object_or_404(Recipe, id=id)
+    
+    if request.user != recipe.author:
+        messages.error(request, "You can only delete your own recipes!")
+        return redirect('recipe_detail', id=recipe.id)
+    
+    if request.method == 'POST':
+        recipe.delete()
+        messages.success(request, 'Recipe deleted successfully!')
+        return redirect('recipes')
+    
+    return render(request, 'christmas/delete_recipe.html', {'recipe': recipe})
