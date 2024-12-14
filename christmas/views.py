@@ -31,6 +31,7 @@ def recipe_detail(request, id):
     )
 
 
+@login_required
 def add_recipe(request):
     """Add a recipe to the database"""
     if request.method == 'POST':
@@ -40,14 +41,14 @@ def add_recipe(request):
             recipe.author = request.user
             recipe.save()
             messages.success(request, 'Recipe added successfully!')
-            # change the redirect to 'recipe_detail', id=recipe.id when the page ready
-            return redirect('recipes')
+            return redirect('detail', id=recipe.id)
     else:
         form = RecipeForm()
 
     return render(request, 'christmas/add_recipe.html', {'form': form})
 
 
+@login_required
 def edit_recipe(request, id):
     """Edit a recipe in the database"""
     recipe = get_object_or_404(Recipe, id=id)
@@ -61,8 +62,7 @@ def edit_recipe(request, id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Recipe updated successfully!')
-            # change the redirect to 'recipe_detail', id=recipe.id when the page ready
-            return redirect('recipes')
+            return redirect('detail', id=recipe.id)
     else:
         form = RecipeForm(instance=recipe)
     
@@ -72,6 +72,7 @@ def edit_recipe(request, id):
     })
 
 
+@login_required
 def delete_recipe(request, id):
     """Delete a recipe from the database"""
     recipe = get_object_or_404(Recipe, id=id)
@@ -83,6 +84,6 @@ def delete_recipe(request, id):
     if request.method == 'POST':
         recipe.delete()
         messages.success(request, 'Recipe deleted successfully!')
-        return redirect('recipes')
+        return redirect('detail', id=recipe.id)
     
     return render(request, 'christmas/delete_recipe.html', {'recipe': recipe})
