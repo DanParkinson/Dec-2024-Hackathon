@@ -2,6 +2,14 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+# Define category choices for home page links
+CATEGORY_CHOICES = (
+    ('Starter', 'Starter'),
+    ('Main', 'Main'),
+    ('Side', 'Side'),
+    ('Dessert', 'Dessert'),
+)
+
  
 # Create your models here.
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -21,6 +29,9 @@ class Recipe(models.Model):
     updated_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     favourites = models.ManyToManyField(User, related_name='favourite_recipes', blank=True)
+    category = models.CharField(
+        max_length=10, choices=CATEGORY_CHOICES, default='Main'
+    )
 
     def get_ingredients_list(self):
         """
