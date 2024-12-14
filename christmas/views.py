@@ -40,8 +40,33 @@ def add_recipe(request):
             recipe.author = request.user
             recipe.save()
             messages.success(request, 'Recipe added successfully!')
-            return redirect('recipe_detail', id=recipe.id)
-        else:
-            form = RecipeForm()
+            # change the redirect to 'recipe_detail', id=recipe.id when the page ready
+            return redirect('recipes')
+    else:
+        form = RecipeForm()
 
     return render(request, 'christmas/add_recipe.html', {'form': form})
+
+
+def edit_recipe(request, id):
+    """Edit a recipe in the database"""
+    recipe = get_object_or_404(Recipe, id=id)
+    
+    if request.user != recipe.author:
+        messages.error(request, "You can only edit your own recipes!")
+        return redirect('recipe_detail', id=recipe.id)
+    
+    if request.method == 'POST':
+        form = RecipeForm(request.POST, request.FILES, instance=recipe)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Recipe updated successfully!')
+            # change the redirect to 'recipe_detail', id=recipe.id when the page ready
+            return redirect('recipes')
+    else:
+        form = RecipeForm(instance=recipe)
+    
+    return render(request, 'christmas/edit_recipe.html', {
+        'form': form,
+        'recipe': recipe
+    })
