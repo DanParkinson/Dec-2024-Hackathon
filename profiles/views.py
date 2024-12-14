@@ -16,13 +16,18 @@ def logout_confirmation(request):
 # Dan - users can view own profile
 @login_required
 def profile_view(request):
+    """render profile information """
     user = request.user # get currently logged in user
     recipes = Recipe.objects.filter(author=user) # fetch recipes created by user
-    return render(request, 'profiles/profile.html', {'user':user, 'recipes':recipes})
+    favourite_recipes = user.favourite_recipes.all()  # fetch Recipes favourited by the user
+    return render(request, 'profiles/profile.html', {
+        'user':user,
+        'recipes':recipes,
+        'favourite_recipes': favourite_recipes,})
 
 # Dan - users can toggle favourites
 @login_required
-def tiggle_favourite(request, id):
+def toggle_favourite(request, id):
     """Toggle a recipe as a favourite for the logged in user. """
     recipe = get_object_or_404(Recipe, id=id)
     if recipe.favourites.filter(id=request.user.id).exists():

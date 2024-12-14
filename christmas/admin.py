@@ -12,5 +12,5 @@ class RecipeAdmin(SummernoteModelAdmin):
                     'title',)
     search_fields = ['author', 'status']
     list_filter = ('author', 'status')
-    filter_horizontal = ('favorites',)  # Dan - Allow easy management of favorites in the admin
+    filter_horizontal = ('favourites',)  # Dan - Allow easy management of favourites in the admin
 
