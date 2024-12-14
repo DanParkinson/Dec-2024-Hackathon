@@ -84,7 +84,21 @@ After this, different the repo, a project board was also created on GitHubOn the
 Here are all the user stories that have been prioritised (all must have and some should have ones) for the current implementation of the site:
 | User Stories                                    | MoSCoW priority           |  Status |
 | ----------------------------------------------- |:-------------------------:| -------:|
-| Ho                                              | must have                 |   Done  |
+| Post own recipes                                | must have                 |   Done  |
+| Edit and Delete Recipes                         | should have               |   Done  |
+| User Profile with Photo and Bio                 | could have                |   Done  |
+| Browse Recipes by Category                      | must have                 |   Done  |
+| Save Favourite Recipes                          | should have               |   Done  |
+| User-Friendly Navigation                        | must have                 |   Done  |
+| Appealing and Simple Design                     | must have                 |   Done  |
+| Responsive Design                               | must have                 |   Done  |
+| Share Recipes on Social Media                   | could have                |   Done  |
+| Search Recipes by Ingredient or Keyword         | could have                |   Done  |
+| Filter Recipes by Dietary Preferences           | could have                |   Done  |
+| Rate and Review Recipes                         | could have                |   Done  |
+| Admin Moderation and Management                 | could have                |   Done  |
+| Print or Save Recipes as PDF                    | could have                |   Done  |
+
 
 All user stories were logged on the [Kanban Project Board](https:) on GitHub repo, along with the assessment criteria and expected performance for the Hackathon, which were also prioritised as must-have, should-have and could-have.
 
