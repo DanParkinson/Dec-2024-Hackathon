@@ -32,6 +32,7 @@ class Recipe(models.Model):
     category = models.CharField(
         max_length=10, choices=CATEGORY_CHOICES, default='Main'
     )
+    recommended = models.BooleanField(default=False)
 
     def get_ingredients_list(self):
         """
