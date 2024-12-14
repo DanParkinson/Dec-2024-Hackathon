@@ -1,10 +1,12 @@
-# Dec-2024-Hackathon
+# Jingle Bites
 # JavaScript Group Hackathon Project <a id="top"/>
 ![logo](https:/)
 
 
 ## Introduction
-The 
+The present website was done as part of the December Hackathon organised by Code Institute (CI) in 2024.
+The initial idea for the group project was to do a site to show recipes to the users and allow them to also input their recipes on the site.
+The group Jingle Bites is composed of 7 students and alumini from different courses by CI, with different members working in different areas that they feel more comfortable/knowledgeable.
 
 ## Table of Contents
 - [User Experience Design](#user-experience-design)
@@ -42,11 +44,14 @@ The
 
 ## User Experience Design
 A user-centred approach has been taken through the inception, design and development of this site.
+Checking layouts and colours, and ultimatelly basing the website in an existing website layout, with smooth colours and appealing design.
+The site was coded, with attention to the responsiveness in different screens.
 
 ### Project Brief
-The project goal
+The project goal is to provide different Christmas recipes to users, allowing them to add their own recipes and as well as to choose their favourite recipes that they can see/review later.
 
-The site user's goals 
+The site user's goals for the site are to get information about different Christmas recipes, as the ingredients, preparation and time that takes to prepare it.
+Also being able share their recipes with other users.
 
 ### Users
 In order to fully understand our users' needs, we asked Microsoft Co-pilot to draw up some user personas based on our project brief. We refined the prompts and after three tries and some refinement afterwards, here are the personas we used:
@@ -57,7 +62,8 @@ In order to fully understand our users' needs, we asked Microsoft Co-pilot to dr
 - Persona 3: "
 
 ## Project Plan
-On the planning day, the draft user stories were derived with the help of MS Co-pilot, which provided a sufficient and relevant user stories including the acceptance criteria and tasks required for each user story. Some adjustments had to be made, as the scope of some of the user stories didn't fit into the project timeframe
+Initially the group got together when the team was known after the first webinar. A repository was created and colaborators were adeed to allow different members to create their branches and work locally, as necessary.
+After this, different the repo, a project board was also created on GitHubOn the planning day, the draft user stories were derived with the help of MS Co-pilot, which provided a sufficient and relevant user stories including the acceptance criteria and tasks required for each user story. Some adjustments had to be made, as the scope of some of the user stories didn't fit into the project timeframe
 
 ### User Stories
 Here are all the user stories that have been prioritised (all must have and some should have ones) for the current implementation of the site:
@@ -65,7 +71,7 @@ Here are all the user stories that have been prioritised (all must have and some
 | ----------------------------------------------- |:-------------------------:| -------:|
 | Ho                                              | must have                 |   Done  |
 
-All user stories were logged on the [Kanban Project Board](https:) on GitHub repo, along with the assessment criteria and expected performance for the Hackathon, which were also prioritised as must-have.
+All user stories were logged on the [Kanban Project Board](https:) on GitHub repo, along with the assessment criteria and expected performance for the Hackathon, which were also prioritised as must-have, should-have and could-have.
 
 As well as using the Project Board to track progress on our project, we also used it during testing to log any significant bugs that need to be fixed before the project deadline. These were then assigned and prioritised alongside other issues and user stories.
 
