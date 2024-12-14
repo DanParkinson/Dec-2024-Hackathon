@@ -56,57 +56,22 @@
     <h2 class="text-center my-4">Recommended</h2>
     <div class="container-fluid">
         <div class="row text-center justify-content-center">
-            <!-- Turkey -->
-            <div class="col-3 col-md-1 recommended-area">
-                <div class="recommended-item">
-                    <img src="{% static 'images/dessert1-home.png' %}" alt="Turkey" class="recommended-image">
-                    <p>Turkey</p>
-                </div>
-            </div>
-            <!-- Roasties -->
-            <div class="col-3 col-md-1 recommended-area">
-                <div class="recommended-item">
-                    <img src="{% static 'images/dessert1-home.png' %}" alt="Roasties" class="recommended-image">
-                    <p>Roasties</p>
-                </div>
-            </div>
-            <!-- Carrots -->
-            <div class="col-3 col-md-1 recommended-area">
-                <div class="recommended-item">
-                    <img src="{% static 'images/dessert1-home.png' %}" alt="Carrots" class="recommended-image">
-                    <p>Carrots</p>
-                </div>
-            </div>
-            <!-- Mash -->
-            <div class="col-3 col-md-1 recommended-area">
-                <div class="recommended-item">
-                    <img src="{% static 'images/dessert1-home.png' %}" alt="Mash" class="recommended-image">
-                    <p>Mash</p>
-                </div>
-            </div>
-            <!-- Pigs in Blankets -->
-            <div class="col-3 col-md-1 recommended-area">
-                <div class="recommended-item">
-                    <img src="{% static 'images/dessert1-home.png' %}" alt="Pigs in Blankets" class="recommended-image">
-                    <p>Pigs in Blankets</p>
-                </div>
-            </div>
-            <!-- Gravy -->
-            <div class="col-3 col-md-1 recommended-area">
-                <div class="recommended-item">
-                    <img src="{% static 'images/dessert1-home.png' %}" alt="Gravy" class="recommended-image">
-                    <p>Gravy</p>
-                </div>
-            </div>
-            <!-- Cranberry Sauce -->
-            <div class="col-3 col-md-1 recommended-area">
-                <div class="recommended-item">
-                    <img src="{% static 'images/dessert1-home.png' %}" alt="Cranberry Sauce" class="recommended-image">
-                    <p>Cranberry Sauce</p>
-                </div>
-            </div>
-            
+            {% if recommended_recipes %}
+                {% for recipe in recommended_recipes %}
+                    <div class="col-3 col-md-1 recommended-area">
+                        <div class="recommended-item">
+                            <a href="{% url 'recipe_detail' recipe.id %}">
+                                <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="recommended-image">
+                                <p class="mt-2">{{ recipe.title }}</p>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p class="text-center">No recommended recipes at the moment. Check back later!</p>
+            {% endif %}
         </div>
     </div>
 </section>
+
 {% endblock %}

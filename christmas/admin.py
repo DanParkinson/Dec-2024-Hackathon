@@ -9,7 +9,10 @@ class RecipeAdmin(SummernoteModelAdmin):
 
     list_display = ('author',
                     'status',
-                    'title',)
+                    'title',
+                    'category',
+                    'recommended',)
+    list_editable = ('recommended',)
     search_fields = ['author', 'status']
     list_filter = ('author', 'status', 'category','recommended')
     filter_horizontal = ('favourites',)  # Dan - Allow easy management of favourites in the admin
