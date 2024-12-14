@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'christmas',
     'home',
     'profiles',
+    'django_summernote',
 ]
 
 
