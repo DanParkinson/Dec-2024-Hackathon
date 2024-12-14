@@ -21,10 +21,16 @@ class Recipe(models.Model):
     updated_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
+    class Meta:
+        """ 
+        Orders recipies by:
+        1. Recipes in draft.
+        2. Oldest updated.
+        i.e. shows oldest draft recipies which have not be published first.
+        """
+        ordering = ["status", "-updated_on"]
+
 
     def __str__(self):
-        """
-        Displays most useful recipe information.
-        """
-        return f"{self.author} | {self.title} | {
-            self.description} | {self.status}"
+        """Displays most useful recipe information."""
+        return f"{self.status} | {self.author} | {self.title} | {self.description}"
