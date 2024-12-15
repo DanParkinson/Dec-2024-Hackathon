@@ -36,7 +36,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '.codeinstitute-ide.net',
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    '8000-franciscahe-dec2024hack-13zmhvi0f62.ws-eu117.gitpod.io',
     ]
 
 # Heroku URL
