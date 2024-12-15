@@ -7,7 +7,7 @@
 ## Introduction
 The present website was done as part of the December Hackathon organised by Code Institute (CI) in 2024.
 The initial idea for the group project was to do a site to show recipes to the users and allow them to also input their recipes on the site.
-The group Jingle Bites is composed of 7 students and alumini from different courses by CI, with different members working in different areas that they feel more comfortable/knowledgeable.
+The group Jingle Bites was composed of 6 elements, including current students and alumini from different courses by CI.
 
 ## Table of Contents
 - [User Experience Design](#user-experience-design)
