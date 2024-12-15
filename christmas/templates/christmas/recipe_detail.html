@@ -60,11 +60,11 @@
 
             <!-- Action Buttons -->
             {% if user.is_authenticated and user == recipe.author %}
-            <div class="d-flex gap-2 mb-5">
-                <a href="{% url 'edit_recipe' recipe.id %}" class="btn btn-dark">
+            <div class="mt-4 d-flex justify-content-center gap-2">
+                <a href="{% url 'edit_recipe' recipe.id %}" class="btn orange-btn">
                     Edit Recipe
                 </a>
-                <a href="{% url 'delete_recipe' recipe.id %}" class="btn btn-danger">
+                <a href="{% url 'delete_recipe' recipe.id %}" class="btn red-btn">
                     Delete Recipe
                 </a>
             </div>
