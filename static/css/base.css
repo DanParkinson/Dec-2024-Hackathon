@@ -357,11 +357,7 @@ h1 {
   background-color: #e07b47;
 }
 
-.card button {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+.orange-btn {
   background-color: #f4a261;
   color: #fff;
   border: none;
