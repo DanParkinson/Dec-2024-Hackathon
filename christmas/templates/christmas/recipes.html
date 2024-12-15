@@ -41,7 +41,7 @@
 
             <!-- Submit Button -->
             <div class="col-auto">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn orange-btn">
                     <span class="icon">
                         <i class="fas fa-search"></i>
                     </span>
@@ -51,7 +51,7 @@
 
             {% if search_term or current_category %}
             <div class="col-auto">
-                <a href="{% url 'recipes' %}" class="btn btn-outline-secondary">Reset</a>
+                <a href="{% url 'recipes' %}" class="btn gray-btn">Reset</a>
             </div>
             {% endif %}
         </form>
