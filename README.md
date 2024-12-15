@@ -80,7 +80,7 @@ Initially the group got together when the team was known after the first webinar
 After this, different the repo, a project board was also created on GitHubOn the planning day, the draft user stories were derived with the help of MS Co-pilot, which provided a sufficient and relevant user stories including the acceptance criteria and tasks required for each user story. Some adjustments had to be made, as the scope of some of the user stories didn't fit into the project timeframe
 
 ### User Stories
-Here are all the user stories that have been prioritised (all must have and some should have ones) for the current implementation of the site:
+Here are all the user stories that have been prioritised for the current implementation of the site:
 | User Stories                                    | MoSCoW priority           |  Status  |
 | ----------------------------------------------- |:-------------------------:| --------:|
 | Post own recipes                                | must have                 |   Done   |
