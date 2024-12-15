@@ -8,8 +8,14 @@ def index(request):
     """
     A view to return the home page with recommended recipes
     """
-    recommended_recipes = Recipe.objects.filter(recommended=True, status=1)[:7]  # Reverse order by ID
-    return render(request, 'home/index.html', {'recommended_recipes': recommended_recipes})
+    recommended_recipes = Recipe.objects.filter(recommended=True, status=1)[:7]  # noqa
+
+    return render(
+        request,
+        'home/index.html',
+        {'recommended_recipes': recommended_recipes}
+    )
+
 
 def about(request):
     """
