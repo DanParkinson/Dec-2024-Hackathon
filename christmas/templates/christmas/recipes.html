@@ -82,7 +82,7 @@
                             <h3 class="card-title">{{ recipe.title }}</h3>
                             <div class="card-details mt-2 justify-content-center">
                                 <i class="fas fa-users"></i>
-                                <span>4</span>
+                                <span>{{ recipe.servings }}</span>
                                 <i class="fas fa-clock ms-3"></i>
                                 <span>{{ recipe.cooking_time }}</span>
                                 {% if user.is_authenticated %}
