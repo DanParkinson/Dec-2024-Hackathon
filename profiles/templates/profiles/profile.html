@@ -17,8 +17,8 @@
             {% for recipe in recipes %}
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <a href="{% url 'recipe_detail' recipe.id %}">
-                        <div class="card h-100">
-                            <div class="card-body text-center">
+                        <div class="card h-100 recipe-card">
+                            <div class="card-body text-center recipe-card-body">
                                 {% if recipe.image %}
                                 <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-3">
                                 {% else %}
@@ -52,8 +52,8 @@
             {% for recipe in favourite_recipes %}
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <a href="{% url 'recipe_detail' recipe.id %}">
-                    <div class="card h-100">
-                        <div class="card-body text-center">
+                    <div class="card h-100 recipe-card">
+                        <div class="card-body text-center recipe-card-body">
                             <!-- Recipe Image -->
                             {% if recipe.image %}
                             <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-3">
