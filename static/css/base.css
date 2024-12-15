@@ -22,7 +22,7 @@ main {
   flex: 1;
 }
 
-a { 
+a {
   /* removed defualt stylings of links */
   text-decoration: none;
   color: inherit;
@@ -31,6 +31,19 @@ a {
 /* Footer styling */
 footer {
   margin-top: 20px;
+}
+
+/* //////////////// Favourites //////////////*/ 
+.favorited {
+  color: red;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.favorited:hover {
+  color: white;
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
 
 /* ///// //////// ....Navbar  css code Start from here.........///////////////// */
@@ -49,118 +62,21 @@ footer {
   z-index: 10;
 }
 
-.logo-text {
-  font-size: 28px; /* Slightly larger for better visibility */
-  font-weight: 600; /* Thicker font weight */
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 400;
   color: white;
-  text-transform: uppercase;
-  letter-spacing: 3px; /* Slightly increased letter spacing for elegance */
-  font-family: "Brush Script MT", cursive; /* Cursive font */
+  font-family: "Brush Script MT", cursive;
+}
+.nav-item {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 2px;
+  font-family: "Brush Script MT", cursive;
   cursor: pointer;
 }
 
-/* Favourite buttons */
-.favorited {
-  color: red;
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
-}
-
-.favorited:hover {
-    color: white;
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
-
-@media (max-width: 768px) {
-  .logo-text {
-    font-size: 24px; /* Slightly smaller for tablets */
-    letter-spacing: 2px; /* Adjust letter spacing for better readability */
-  }
-}
-
-/* Adjust font size for small screens */
-@media (max-width: 480px) {
-  .logo-text {
-    font-size: 20px; /* Smaller font for mobile devices */
-    letter-spacing: 1px; /* Reduced spacing for smaller screens */
-  }
-}
-.navbar .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-.navbar .menu {
-  display: flex;
-  gap: 20px;
-}
-
-.navbar .menu a {
-  text-decoration: none;
-  color: #f8f9fa;
-  font-size: 18px;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.navbar .menu a:hover {
-  color: #ffd700;
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.menu-toggle div {
-  width: 25px;
-  height: 3px;
-  background-color: #f8f9fa;
-}
-  
-
-@media (max-width: 768px) {
-  .navbar .menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #744261;
-    position: absolute;
-    top: 70px;
-    right: 50%;
-    transform: translateX(50%);
-    padding: 20px;
-    width: 90%;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    margin-top: 10px;
-  }
-
-  .navbar .menu.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-}
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px; /* Navbar ki height */
-  background-color: #333;
-}
-
-h1 {
-  padding-top: 70px; /* Navbar ki height se zyada margin de */
-}
 .menu a {
   text-decoration: none;
   color: black;
@@ -170,25 +86,22 @@ h1 {
   transition: color 0.3s ease;
 }
 
-/* Animated Line */
-.menu a::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  height: 1px;
-  width: 0;
-  background-color: white;
-  transition: width 0.3s ease;
+.nav-link {
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-/* Active Tab Style */
-.menu a.active {
-  color: yellow;
+.nav-link.active {
+  text-decoration: underline;
+  color: #000;
 }
 
-.menu a.active::after {
-  width: 100%;
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.8); /* Make the border white */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* White hamburger */
 }
 
 /* ///// ///////////////// Navbar css code End here //////////////////////////////////*/
@@ -501,7 +414,6 @@ h1 {
 }
 
 /* ////////////////////// Profile spage ////////////////// */
-
 
 /* ///////////// Footer code Start from here /////////////// */
 
