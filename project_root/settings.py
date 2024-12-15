@@ -207,5 +207,3 @@ cloudinary.config(secure=True, )
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DISABLE_COLLECTSTATIC=1
-
-X_FRAME_OPTIONS = 'ALLOWALL'
