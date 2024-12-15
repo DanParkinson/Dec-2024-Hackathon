@@ -17,14 +17,14 @@ def recipes(request):
     if request.GET:
         # Search Query
         if 'q' in request.GET:
-            query = request.GET['q'].strip()
+            query = request.GET.get('q','').strip()
             if query:
                 queries = Q(title__icontains=query) | Q(description__icontains=query)
                 recipes_list = recipes_list.filter(queries)
 
         # Category filtering
         if 'category' in request.GET:
-            category = request.GET['category'].strip()
+            category = request.GET.get('category','').strip()
             if category:
                 recipes_list = recipes_list.filter(category=category)
 
@@ -48,6 +48,7 @@ def recipes(request):
         'category_choices': CATEGORY_CHOICES,
         'no_results': no_results,
     }
+    print("GET Parameters:", request.GET)
 
     return render(request, 'christmas/recipes.html', context)
 
