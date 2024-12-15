@@ -22,6 +22,12 @@ main {
   flex: 1;
 }
 
+a { 
+  /* removed defualt stylings of links */
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Footer styling */
 footer {
   margin-top: 20px;
@@ -451,6 +457,9 @@ h1 {
 .blog-image {
   width: 50%;
 }
+
+/* ////////////////////// Profile spage ////////////////// */
+
 
 /* ///////////// Footer code Start from here /////////////// */
 
