@@ -155,14 +155,22 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 
 ## Website Features
 ### Homepage
-  <img src="">
+  <img src="static/images/homepage-final.png">
 
-The 
+### About
+  <img src="static/images/Homepage-about-1.png">
+  <img src="static/images/Homepage-about-2.png">
 
-### Footer
-  <img src="">
+### Recipes
+  <img src="static/images/recipes-1.png">
+  <img src="static/images/recipes-2.png">
 
-Th.
+### Register
+  <img src="static/images/signup.png">
+
+### Login
+  <img src="static/images/login.png">
+
 
 [Back to top](#top)
 
@@ -225,8 +233,8 @@ Once the MVP has been created in Gitpod, go to GitHub Pages to make an early dep
 Validation of HTML/CSS, Lighthouse Audits.
 
 ### HTML Validation
-- Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed. No errors found after fixing.
-![HTML_validation](https://github.com/user-attachments/assets/206cb6f7-b1d9-4a7f-a853-3d492d9157e6)
+- Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_uri) to test the HTML on all webpages and updated as needed. No errors found after fixing.
+![HTML_validation](static/images/HTML-validation.png)
 
 ### CSS Validation
 
@@ -235,7 +243,14 @@ Validation of HTML/CSS, Lighthouse Audits.
 
 
 ### Lighthouse Audit
-- Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility. 
+- Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility. <br>
+<img src="static/images/Homepage-lighthouse-performance.png">
+<img src="static/images/about-lighthouse-performance.png">
+<img src="static/images/recipes-lighthouse-performance.png">
+<img src="static/images/recipe-lighthouse-performance.png">
+<img src="static/images/signup-lighthouse-performance.png">
+<img src="static/images/Homepage-lighthouse-performance.png">
+<img src="static/images/login-lighthouse-performance.png">
 
 
 ### Bugs yet to be Fixed
