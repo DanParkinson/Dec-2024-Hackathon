@@ -8,7 +8,7 @@ from crispy_forms.layout import Layout, Submit, Field, Div
 class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
-        fields = ['title', 'description', 'ingredients', 'instructions', 'cooking_time', 'image', 'category']
+        fields = ['title', 'description', 'ingredients', 'instructions', 'cooking_time', 'servings','image', 'category']
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
