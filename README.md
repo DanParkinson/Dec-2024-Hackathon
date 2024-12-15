@@ -176,8 +176,8 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 [Back to top](#top)
 
 ## Responsive Design
-Most of the content is responsive to different screen sizes as it was built using components from the Bootstrap Library.
-![Responsive Design](static/images/Screenshot 2024-12-15 at 20.38.35.png)
+
+![Responsive Design](static/images/static/images/responsive-design.png)
 
 ## Future Features
 - Print or Save Recipes as PDF
