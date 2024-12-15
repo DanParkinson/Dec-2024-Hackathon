@@ -311,6 +311,10 @@ Validation of HTML/CSS, Lighthouse Audits.
 <img src="static/images/Homepage-lighthouse-performance.png">
 <img src="static/images/login-lighthouse-performance.png">
 
+### Python Testing
+- No errors shown while testing and the automatically generated migrations don’t require any changes. <br>
+<img src="static/images/python-test.png">
+
 [Back to top](#top)
 
 ## Credits
