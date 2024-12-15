@@ -136,7 +136,15 @@ This site was based on [PinchOfFun](https://pinchofyum.com/) website by suggesti
   <img src="static/images/contrast-check3.png">
 
 ### Typography
-Initial website font-family 
+No Google fonts were used on the website.
+For the body section of the webpage, font-family used was: "Poppins", sans-serif. Example of Poppins font [Google Fonts](https://fonts.google.com/specimen/Poppins?preview.text=Jingle%20Bites)
+<img src="static/images/Jingle-Bites-poppins.png">
+
+For the Logo, font-family used was: "Brush Script MT", cursive. Example of "Brush Script MT" font from [Microsoft](https://learn.microsoft.com/en-us/typography/font-list/brush-script-mt)
+<img src="static/images/brush-script.png">
+
+For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif. Style example of "Segoe UI" from [Microsoft](https://learn.microsoft.com/en-us/typography/font-list/segoe-ui) 
+<img src="static/images/segoe-ui.png">
 
 ### Imagery
 - B image<br>
