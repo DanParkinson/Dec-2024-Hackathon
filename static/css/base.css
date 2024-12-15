@@ -33,6 +33,19 @@
     font-family: "Brush Script MT", cursive; /* Cursive font */
     cursor: pointer;
   }
+
+  .favorited {
+    color: red;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+  .favorited:hover {
+      color: white;
+      background-color: #dc3545;
+      border-color: #dc3545;
+  }
+
   @media (max-width: 768px) {
     .logo-text {
       font-size: 24px; /* Slightly smaller for tablets */
@@ -83,6 +96,7 @@
     height: 3px;
     background-color: #f8f9fa;
   }
+  
   
   @media (max-width: 768px) {
     .navbar .menu {
