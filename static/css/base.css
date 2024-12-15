@@ -59,17 +59,18 @@ footer {
   cursor: pointer;
 }
 
-  .favorited {
-    color: red;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
+/* Favourite buttons */
+.favorited {
+  color: red;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
 }
 
-  .favorited:hover {
-      color: white;
-      background-color: #dc3545;
-      border-color: #dc3545;
-  }
+.favorited:hover {
+    color: white;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
 
 @media (max-width: 768px) {
   .logo-text {
