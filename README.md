@@ -1,7 +1,6 @@
 # Jingle Bites
-# JavaScript Group Hackathon Project <a id="top"/>
+# Code Institute "December 2024 - HackTeam Takeover!" <a id="top"/>
 ![logo](static/images/logo-4-+.png)
-
 
 ## Introduction
 The present website was done as part of the December Hackathon organised by Code Institute (CI) in 2024.
@@ -102,6 +101,8 @@ All user stories were logged on the [GitHub Project Board](https://github.com/us
 
 As well as using the Project Board to track progress on our project, we also used it during testing to log any significant bugs that need to be fixed before the project deadline. These were then assigned and prioritised alongside other issues and user stories.
 
+<img src="static/images/jingle-bites-project-board.png">
+
 [Back to top](#top)
 
 ### Wireframes
@@ -114,9 +115,9 @@ Initial layout of website in different devices:
   <img src="static/images/Wireframe-tablet-view.png">
   
 - Desktop/Laptop view:<br>
-  <img src="static/images/Wireframe-desktop-homepage1.png">
-  <img src="static/images/Wireframe-desktop-about1.png">
-  <img src="static/images/Wireframe-desktop-recipe1.png">
+  <img src="static/images/desktop-wireframe1.png">
+  <img src="static/images/desktop-wireframe2.png">
+
 
 [Back to top](#top)
 
@@ -252,9 +253,6 @@ Validation of HTML/CSS, Lighthouse Audits.
 <img src="static/images/Homepage-lighthouse-performance.png">
 <img src="static/images/login-lighthouse-performance.png">
 
-
-### Bugs yet to be Fixed
-- So
 
 [Back to top](#top)
 
