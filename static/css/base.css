@@ -22,6 +22,10 @@ main {
   flex: 1;
 }
 
+.main {
+  margin-top: 100px !important;
+}
+
 a {
   /* removed defualt stylings of links */
   text-decoration: none;
@@ -292,7 +296,6 @@ h1 {
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 400px; /* Set the height of the card */
 }
 .top-card {
   height: 300px;
@@ -579,4 +582,66 @@ h1 {
   height: 100px;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+/* Form section styling */
+.form-section {
+  padding: 20px 0;
+}
+
+/* Card styling for the recipe form */
+.form-section .card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section .card-header {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+}
+
+.form-section .card-body {
+  padding: 30px;
+}
+
+.form-section .about-recipes {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #744261;
+  text-align: center;
+}
+
+.form-section .about-the-recipes {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Form elements styling */
+.form-section form .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.form-section form .form-control:focus {
+  border-color: #744261;
+  box-shadow: 0 0 0 0.2rem rgba(116, 66, 97, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-section {
+    margin-top: 60px;
+  }
+  
+  .form-section .card-body {
+    padding: 20px;
+  }
+  
+  .form-section .about-recipes {
+    font-size: 20px;
+  }
 }

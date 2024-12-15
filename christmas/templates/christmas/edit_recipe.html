@@ -2,13 +2,29 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container mt-4">
-    <h2>Edit Recipe: {{ recipe.title }}</h2>
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-dark">Update Recipe</button>
-        <a href="{% url 'recipe_detail' recipe.id %}" class="btn btn-danger">Cancel</a>
-    </form>
-</div>
+<section class="form-section container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
+            <div class="card shadow">
+                <div class="card-header bg-white">
+                    <h2 class="about-recipes">Edit Recipe</h2>
+                    <p class="about-the-recipes">
+                        Update your recipe details below. You can modify the title, ingredients,
+                        instructions, and photo. Click "Update Recipe" when you're finished with your changes.
+                    </p>
+                </div>
+                <div class="card-body">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-dark me-2">Update Recipe</button>
+                            <a href="{% url 'recipes' %}" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

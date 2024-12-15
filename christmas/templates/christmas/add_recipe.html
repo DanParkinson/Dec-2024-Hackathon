@@ -2,13 +2,30 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container mt-4">
-    <h2>Add New Recipe</h2>
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-dark">Add Recipe</button>
-        <a href="{% url 'recipes' %}" class="btn btn-secondary">Cancel</a>
-    </form>
-</div>
+<section class="form-section container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
+            <div class="card shadow">
+                <div class="card-header bg-white">
+                    <h2 class="about-recipes">Add New Recipe</h2>
+                    <p class="about-the-recipes ">
+                        Create your favorite recipes by filling out the details below. Add a descriptive title, a list of ingredients,
+                        step-by-step instructions, and a photo to make your recipe shine. Once you're done, click "Submit" to save your
+                        recipe!
+                    </p>
+                </div>
+                <div class="card-body">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-dark me-2">Add Recipe</button>
+                            <a href="{% url 'recipes' %}" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
