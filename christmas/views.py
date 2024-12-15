@@ -55,19 +55,21 @@ def recipes(request):
     return render(request, 'christmas/recipes.html', context)
 
 def recipe_detail(request, id):
-    """Renders details of a single recipe to recipie_detail.html"""
+    """Renders details of a single recipe to recipe_detail.html"""
     recipe = get_object_or_404(Recipe, id=id)
-    recipes_list = Recipe.objects.all()
+    is_favorited = False
+    if request.user.is_authenticated:
+        is_favorited = recipe.favourites.filter(id=request.user.id).exists()
+    
+    favourites_count = recipe.favourites.count()
+
     context = {
         'recipe': recipe,
-        'recipes_list': recipes_list
+        'is_favorited': is_favorited,
+        'favourites_count': favourites_count,
     }
 
-    return render(
-        request,
-        'christmas/recipe_detail.html',
-        context
-    )
+    return render(request, 'christmas/recipe_detail.html', context)
 
 
 @login_required
