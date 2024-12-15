@@ -62,6 +62,7 @@
                   <a class="nav-item nav-link" href="{% url 'recipes' %}">Recipes</a>
                   {% if user.is_authenticated %}
                       <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                      <a class="nav-item nav-link" href="{% url 'add_recipe' %}">Create a recipe</a>
                   {% endif %}
               </div>
               <div class="navbar-nav ms-auto">
