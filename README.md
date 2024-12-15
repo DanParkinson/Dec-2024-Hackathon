@@ -176,7 +176,7 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 
 ## Responsive Design
 Most of the content is responsive to different screen sizes as it was built using components from the Bootstrap Library.
-![amiresponsive](https:/)
+![Responsive Design](static/images/Screenshot 2024-12-15 at 20.38.35.png)
 
 ## Future Features
 - Print or Save Recipes as PDF
@@ -218,21 +218,49 @@ Most of the content is responsive to different screen sizes as it was built usin
 ## Deployment
 
 Heroku deployment process:
-  - Create a Heroku Account: Sign up for a Heroku account at Heroku if you don't already have one.
-  - Install Heroku CLI: Download and install the Heroku Command Line Interface (CLI) on your local machine.
-  - Log in to Heroku: Open your terminal and log in to your Heroku account using the command:
-      - heroku login
-  - Initialize a Git Repository: If your project isn't already in a Git repository, initialize one:
-      - git init
-  - Add and Commit Your Code: Add your project files to the repository and commit them:
-      - git add .
-      - git commit -m "Initial commit"
-  - Create a Heroku App: Create a new app on Heroku:
-      - heroku create
-  - Deploy Your Application: Push your code to Heroku:
-      - git push heroku master
-  - Open Your Application: Once the deployment is complete, open your app using:
-      - heroku open
+- This project uses Heroku, a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+Deployment steps are as follows, after account setup:
+- Select New in the top-right corner of your Heroku Dashboard, and select Create new app from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select Create App.
+- From the new app Settings, click Reveal Config Vars, and set your environment variables.
+  - | Key | Value |
+  - | --- | --- |
+  - | `AWS_ACCESS_KEY_ID` | user's own value |
+  - | `AWS_SECRET_ACCESS_KEY` | user's own value |
+  - | `DATABASE_URL` | user's own value |
+  - | `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
+  - | `EMAIL_HOST_PASS` | user's own value |
+  - | `EMAIL_HOST_USER` | user's own value |
+  - | `SECRET_KEY` | user's own value |
+  - | `STRIPE_PUBLIC_KEY` | user's own value |
+  - | `STRIPE_SECRET_KEY` | user's own value |
+  - | `STRIPE_WH_SECRET` | user's own value |
+  - | `USE_AWS` | True |
+- Heroku needs three additional files in order to deploy properly.
+  - requirements.txt
+  - Procfile
+  - runtime.txt
+  - You can install this project's requirements (where applicable) using:
+  - pip3 install -r requirements.txt
+- If you have your own packages that have been installed, then the requirements file needs updated using:
+  - pip3 freeze --local > requirements.txt
+- The Procfile can be created with the following command:
+  - echo web: gunicorn app_name.wsgi > Procfile
+  - replace app_name with the name of your primary Django app name; the folder where settings.py is located
+- The runtime.txt file needs to know which Python version you're using:
+  - type: python3 --version in the terminal.
+  - in the runtime.txt file, add your Python version:
+    - python-3.9.19
+- For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+- Either:
+  - Select Automatic Deployment from the Heroku app.
+- Or:
+  - In the Terminal/CLI, connect to Heroku using this command: heroku login -i
+  - Set the remote for Heroku: heroku git:remote -a app_name (replace app_name with your app name)
+  - After performing the standard Git add, commit, and push to GitHub, you can now type:
+    - git push heroku main
+- The project should now be connected and deployed to Heroku!
 
 [Back to top](#top)
 
