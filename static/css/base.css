@@ -72,9 +72,10 @@ footer {
   color: white;
   font-family: "Brush Script MT", cursive;
 }
+
 .nav-item {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 100;
   color: white;
   letter-spacing: 2px;
   font-family: "Brush Script MT", cursive;
@@ -509,6 +510,10 @@ h1 {
   .footer-social {
     justify-content: center;
   }
+}
+
+.social-media-icons {
+  font-size: 2rem;
 }
 
 /* ////////// Footer end here ////////////////////// */

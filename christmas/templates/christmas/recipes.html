@@ -89,10 +89,9 @@
                                 <a href="{% url 'toggle_favourite' recipe.id %}" class="btn {% if recipe.is_favorited %}favorited{% endif %}">
                                     <i class="fa-solid fa-heart"></i>
                                 </a>
+                                <strong>{{ recipe.favourites_count }}</strong>
                                 {% endif %}
                             </div>
-                            <p class="mt-2"><strong>{{ recipe.favourites_count }}</strong> people have favorited this recipe
-                            </p>
                         </div>
                     </a>
                 </div>

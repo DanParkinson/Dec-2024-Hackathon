@@ -7,52 +7,63 @@
     <h1>Welcome, {{ user.get_full_name|default:user.username }}</h1>
     <p><strong>Email:</strong> {{ user.email|default:"Not provided" }}</p>
 </section>
-    <!-- User created recipes-->
-    
-<section>
+
+<!-- Recipes displayed from database -->
+<div class="container mt-4">
     {% if recipes %}
-    <div class="container mt-4">
-        <h2 class="mb-2">My Recipes</h2>
+    <div class="row">
+        <div class="col my-2">
+            <h2 class="text-center mb-2">My Recipes</h2>
+        </div>
         <div class="row">
             {% for recipe in recipes %}
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 recipe-card">
                     <a href="{% url 'recipe_detail' recipe.id %}">
-                        <div class="card h-100 recipe-card">
-                            <div class="card-body text-center recipe-card-body">
-                                {% if recipe.image %}
-                                <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-3">
-                                {% else %}
-                                <p>No image available.</p>
+                        <div class="card-body text-center recipe-card-body">
+                            {% if recipe.image %}
+                            <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-3">
+                            {% else %}
+                            <p>No image available.</p>
+                            {% endif %}
+                            <h3 class="card-title">{{ recipe.title }}</h3>
+                            <div class="card-details mt-2 justify-content-center">
+                                <i class="fas fa-users"></i>
+                                <span>4</span>
+                                <i class="fas fa-clock ms-3"></i>
+                                <span>{{ recipe.cooking_time }}</span>
+                                {% if user.is_authenticated %}
                                 {% endif %}
-                                <h3 class="card-title">{{ recipe.title }}</h3>
-                                <div class="card-details mt-2 justify-content-center">
-                                    <i class="fas fa-users"></i>
-                                    <span>4</span>
-                                    <i class="fas fa-clock ms-3"></i>
-                                    <span>{{ recipe.cooking_time }}</span>
-                                </div>
                             </div>
                         </div>
                     </a>
                 </div>
+            </div>
             {% endfor %}
         </div>
     </div>
     {% else %}
-        <p>You haven't created any recipes yet.</p>
+    <div class="row">
+        <div class="col my-2">
+            <p class="text-center">You haven't created any recipes yet.</p>
+        </div>
+    </div>
     {% endif %}
-</section>
+</div>
 
-    <!-- Favourite recipes-->
 <section>
-{% if favourite_recipes %}
+    {% if favourite_recipes %}
     <div class="container mt-4">
-        <h2 class="mb-2">My Favourite Recipes</h2>
+        <div class="row">
+            <div class="col my-2">
+                <h2 class="text-center mb-2">My Favourite Recipes</h2>
+            </div>
+        </div>
         <div class="row">
             {% for recipe in favourite_recipes %}
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <a href="{% url 'recipe_detail' recipe.id %}">
-                    <div class="card h-100 recipe-card">
+                <div class="card h-100 recipe-card">
+                    <a href="{% url 'recipe_detail' recipe.id %}">
                         <div class="card-body text-center recipe-card-body">
                             <!-- Recipe Image -->
                             {% if recipe.image %}
@@ -60,10 +71,16 @@
                             {% else %}
                             <p>No image available.</p>
                             {% endif %}
-                            
+
                             <!-- Recipe Title -->
                             <h3 class="card-title mb-3">{{ recipe.title }}</h3>
-                            <br>
+
+                            <!-- Cooking Time -->
+                            <div class="card-details mt-2 justify-content-center">
+                                <i class="fas fa-clock ms-3"></i>
+                                <span>{{ recipe.cooking_time }}</span>
+                            </div>
+
                             <!-- Toggle Favourite Button -->
                             <div class="mt-3">
                                 <form method="POST" action="{% url 'toggle_favourite' recipe.id %}">
@@ -78,16 +95,21 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
-                </a>   
+                    </a>
+                </div>
             </div>
             {% endfor %}
         </div>
     </div>
     {% else %}
-    <p>You haven't favourited any recipes yet.</p>
+    <div class="row">
+        <div class="col my-2">
+            <p class="text-center">You haven't favourited any recipes yet.</p>
+        </div>
+    </div>
     {% endif %}
 </section>
+
 
 
 {% endblock %}
