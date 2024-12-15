@@ -85,7 +85,7 @@
                             <div class="mt-3">
                                 <form method="POST" action="{% url 'toggle_favourite' recipe.id %}">
                                     {% csrf_token %}
-                                    <button type="submit" class="btn btn-danger">
+                                    <button type="submit" class="btn orange-btn">
                                         {% if user in recipe.favourites.all %}
                                             Unfavourite
                                         {% else %}
