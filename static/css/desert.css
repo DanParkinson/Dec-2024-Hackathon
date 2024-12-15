@@ -1,0 +1,186 @@
+.main-body-catergory {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    background-color: #f5f5f5;
+    margin-top: 50px;
+  }
+  .container-category-container {
+    background-color: white;
+    padding: 20px;
+    /* max-width: 900px; */
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .text-content {
+    flex: 1;
+    padding-right: 20px;
+  }
+  .text-content h1 {
+    font-weight: 700;
+    text-align: left;
+    font-size: 2.5em;
+    color: #744261;
+    margin: 20px 0;
+  }
+  .text-content p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+  }
+  .text-content .info {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .text-content .info i {
+    color: #744261;
+    margin-right: 10px;
+  }
+  .text-content .info span {
+    font-size: 1em;
+    color: #744261;
+    margin-right: 20px;
+  }
+  .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-content img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .nutrition {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .nutrition div {
+    background-color: #744261;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+  .nutrition div:first-child {
+    margin-left: 0;
+  }
+  .nutrition div:last-child {
+    margin-right: 0;
+  }
+  @media (max-width: 768px) {
+    .container-category-container {
+      flex-direction: column;
+    }
+    .text-content {
+      padding-right: 0;
+    }
+    .nutrition {
+      flex-direction: column;
+    }
+    .nutrition div {
+      margin: 5px 0;
+    }
+  }
+  
+  /* this is for the categories..... */
+  .nutrition-container-unique {
+    text-align: center;
+  }
+  .nutrition-title-unique {
+    font-size: 18px;
+    font-weight: bold;
+    color: #744261;
+    margin-bottom: 20px;
+  }
+  .nutrition-grid-unique {
+    display: flex;
+    /* justify-content: center; */
+    gap: 10px;
+  }
+  .nutrition-item-unique {
+    border: 1px solid #744261;
+    width: 80px;
+  }
+  .nutrition-item-unique .label-unique {
+    background-color: #744261;
+    color: white;
+    padding: 5px 0;
+    font-size: 14px;
+  }
+  .nutrition-item-unique .value-unique {
+    padding: 10px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  /* lowe section..... */
+  
+  .recipe-body {
+    margin-bottom: 50px;
+    font-family: Arial, sans-serif;
+    /* margin: 0; */
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #744261;
+    color: #fff;
+  }
+  .recipe-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .recipe-left-column,
+  .recipe-right-column {
+    padding: 20px;
+    width: 50%;
+  }
+  .recipe-left-column {
+    background-color: #744261;
+  }
+  .recipe-right-column {
+    background-color: #fff;
+    color: #744261;
+  }
+  /* h1.recipe-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+  } */
+  p.recipe-text {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  .recipe-icon-bar {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 50px;
+  }
+  .recipe-icon-bar i {
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .recipe-container {
+      flex-direction: column;
+    }
+    .recipe-left-column,
+    .recipe-right-column {
+      width: 100%;
+    }
+    .recipe-share-icon {
+      position: static;
+      margin: 20px 0;
+    }
+  }
+  /* cards between the div.... */
+  
