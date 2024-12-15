@@ -37,6 +37,76 @@ footer {
   margin-top: 20px;
 }
 
+/* Reuseable classes */
+.orange-btn {
+  background-color: #f4a261;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.purple-btn {
+  background-color: #464968;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.red-btn {
+  background-color: #8d0801;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.gray-btn {
+  background-color: #6d6875;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+
+.orange-btn:hover {
+  background-color: #e07b47;
+  color: #fff;
+}
+
+.purple-btn:hover {
+  background-color: #2e3046;
+  color: #fff;
+}
+
+.red-btn:hover {
+  background-color: #4a0501;
+  color: #fff;
+}
+
+.gray-btn:hover {
+  background-color: #39363e;
+  color: #fff;
+}
+
 /* //////////////// Favourites //////////////*/ 
 .favorited {
   color: red;
@@ -358,21 +428,6 @@ h1 {
   background-color: #e07b47;
 }
 
-.orange-btn {
-  background-color: #f4a261;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 500;
-  transition: background-color 0.3s;
-}
-
-.card button:hover {
-  background-color: #e07b47;
-}
 
 /* .../////////// card css end here ///////////////// */
 
@@ -416,6 +471,21 @@ h1 {
 
 
 /* ////////////////////// Profile spage ////////////////// */
+
+.profile-container .card {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+}
+
+.profile-container .card-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.profile-container .card-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
 
 /* ///////////// Footer code Start from here /////////////// */
 

@@ -26,7 +26,7 @@
                 <select class="form-select" id="categoryDropdown" name="category">
                     <option value="">All Categories</option>
                     {% for category_value, category_label in category_choices %}
-                    <option value="{{ category_value }}" {% if current_category|default:'' == category_value %}selected{% endif %}>
+                    <option value="{{ category_value }}" {% if current_category == category_value %}selected{% endif %}>
                     {{ category_label }}
                     </option>
                     {% endfor %}
@@ -36,12 +36,12 @@
             <!-- Search Input -->
             <div class="col-auto">
                 <input type="text" class="form-control" name="q" placeholder="Search recipes..."
-                    value="{% if search_term %}{{ search_term }}{% endif %}">
+                    value="{{ search_term|default:'' }}">
             </div>
 
             <!-- Submit Button -->
             <div class="col-auto">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn orange-btn">
                     <span class="icon">
                         <i class="fas fa-search"></i>
                     </span>
@@ -51,7 +51,7 @@
 
             {% if search_term or current_category %}
             <div class="col-auto">
-                <a href="{% url 'recipes' %}" class="btn btn-outline-secondary">Reset</a>
+                <a href="{% url 'recipes' %}" class="btn gray-btn">Reset</a>
             </div>
             {% endif %}
         </form>
