@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
-<h1 class="about-me">About Jingle Bites</h1>
+<h1 class="about-me" style="font-family: 'poppins';">About Jingle Bites</h1>
 <!--Hero Image -->
 <section class="card-section">
     <div class="new-card-container">
@@ -16,8 +16,18 @@
 <br /><br />
 
 <section>
-    <h2 class="about-page">About The Page</h2>
-    <p class="about-this-page">
+    <h2 class="about-page" style="font-size: 30px; font-family: 'poppins';">About The Page</h2>
+    <div class="text-center mb-4">
+    <img src="{% static 'images/decorative-line.png' %}" class="decorative-line"
+    style="
+    mix-blend-mode: multiply;
+    width: 200px;
+    margin-bottom: 20px;
+    
+    "
+    alt="decorative line">
+</div>
+    <p class="about-this-page" style="text-align: center; font-size: 20px; padding-left: 20px; padding-right: 20px;">
     Welcome to Jingle Bites, your one-stop destination for all things delicious
     this holiday season! Designed with love by Jingle Bites Team developers, this
     website brings you a curated collection of festive Christmas recipes. Whether
@@ -29,8 +39,8 @@
     <br /><br />
     <div class="image-container">
     <img
-        src="#"
-        style="border-radius: 10px"
+        src="{% static 'images/recipe-image.png' %}"
+        style="border-radius: 10px; box-shadow: 10px 10px 10px  #744261;"
         alt="christmas Image"
         class="christmas-image"
     />
@@ -40,12 +50,22 @@
 <br /><br />
 
 <section>
-    <h2 class="about-recipes">About The Recipes</h2>
-    <p class="about-the-recipes">
+    <h2 class="about-recipes" style="font-size: 30px; font-family: 'poppins';">About The Recipes</h2>
+    <div class="text-center mb-4">
+        <img src="{% static 'images/decorative-line.png' %}" class="decorative-line"
+        style="
+        mix-blend-mode: multiply;
+        width: 200px;
+        margin-bottom: 20px;
+        
+        "
+        alt="decorative line">
+    </div>
+    <p class="about-the-recipes" style="text-align: center; font-size: 20px; padding-left: 20px; padding-right: 20px;">
     Jingle Bites brings the magic of Christmas to your table with a delightful
     collection of festive recipes. Whether you're hosting a family feast or
     looking for quick treats, our recipes are designed to make your holiday
-    cooking joyful and memorable.
+    cooking joyful and memorable.   
     </p>
     <br /><br />
     <div class="image-container">
@@ -53,9 +73,9 @@
         src="{% static 'images/chrismas1.png' %}"
         style="
         width: 250px;
-        height: 175px;
-        padding-right: 20px;
+        height: 175px;        
         border-radius: 10px;
+        box-shadow: 5px 5px 5px  #744261;
         "
         alt="Recipe Image 1"
         class="recipe-image-1"
@@ -64,16 +84,18 @@
         src="{% static 'images/chrismas2.png' %}"
         style="
         width: 250px;
-        height: 175px;
-        padding-right: 20px;
+        height: 175px;        
         border-radius: 10px;
+        box-shadow: 5px 5px 5px  #744261;
         "
         alt="Recipe Image 2"
         class="recipe-image-2"
     />
     <img
         src="{% static 'images/chrismas3.png' %}"
-        style="width: 250px; height: 175px; border-radius: 10px"
+        style="width: 250px; height: 175px; 
+        border-radius: 10px; 
+        box-shadow: 5px 5px 5px  #744261;"
         alt="Recipe Image 3"
         class="recipe-image-3"
     />
