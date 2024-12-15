@@ -21,12 +21,9 @@ The group Jingle Bites is composed of 7 students and alumini from different cour
     - [Imagery](#imagery)
 - [Website Features](#website-features)
     - [Homepage](#homepage)
-    - [Rules modal](#rules-modal)
     - [Categories Page](#categories-page)
-    - [Quiz Page](#quiz-page)
     - [Results Page](#results-page)
     - [Single Javascript Makes Multiple Pages](#single-javascript-makes-multiple-pages)
-    - [Question Bank](#question-bank)
     - [Footer](#footer)
 - [Responsive Design](#responsive-design)
 - [Future Features](#future-features)
@@ -108,7 +105,7 @@ As well as using the Project Board to track progress on our project, we also use
 [Back to top](#top)
 
 ### Wireframes
-Initial layout of website:
+Initial layout of website in different devices:
 
 - Mobile view:<br>
   <img src="static/images/Wireframe-mobile-view.png">
@@ -128,6 +125,8 @@ Initial layout of website:
 This site was based on [PinchOfFun](https://pinchofyum.com/) website by suggestion of a team member and after discussion within the group.
 
 - Colour Palette <br>
+  Done using [coolors](https://coolors.co/)<br>
+
   <img src="static/images/coloor-palette.png">
 
 - Contrast check <br>
@@ -138,7 +137,7 @@ This site was based on [PinchOfFun](https://pinchofyum.com/) website by suggesti
   <img src="static/images/contrast-check3.png">
 
 ### Typography
-No Google fonts were used on the website.
+
 For the body section of the webpage, font-family used was: "Poppins", sans-serif. Example of Poppins font [Google Fonts](https://fonts.google.com/specimen/Poppins?preview.text=Jingle%20Bites)<br>
 <img src="static/images/Jingle-Bites-poppins.png">
 
@@ -172,7 +171,11 @@ Most of the content is responsive to different screen sizes as it was built usin
 ![amiresponsive](https:/)
 
 ## Future Features
-- Ti
+- Print or Save Recipes as PDF
+- Admin Moderation and Management
+- Filter Recipes bu Dietary Preferences
+- Search Recipes by Ingredient or Keyword
+- Share Recipes on Social Media
 
 ## Technologies Used
 ### Languages and Technologies
@@ -196,6 +199,7 @@ Most of the content is responsive to different screen sizes as it was built usin
 ### Frameworks
 ![Static Badge](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
+![Static Badge](static/images/cloudinary-squareLogo.webp)
 
 ### DataBases
 ![Static Badge](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
@@ -250,7 +254,7 @@ Other re
 The GitHub Copilot extension was installed in our local versions of Visual Studio Code.
 
 #### Debugging
-Copilot was regularly used for debugging code 
+Copilot was used for debugging code.
 
 #### Code Optimisation
 When coding more complicated logical 
