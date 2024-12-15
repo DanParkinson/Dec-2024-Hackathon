@@ -44,6 +44,10 @@ class RecipeForm(forms.ModelForm):
                 css_class='col-md-6 mb-3'
             ),
             Div(
+                Field('servings', css_class='form-control'),  # New Servings Field
+                css_class='col-md-6 mb-3'
+            ),
+            Div(
                 Submit('submit', 'Save Recipe', css_class='btn btn-primary'),
                 css_class='col-12'
             )
