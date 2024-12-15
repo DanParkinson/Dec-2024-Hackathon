@@ -71,8 +71,8 @@
         <div class="row">
             {% for recipe in recipes %}
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <a href="{% url 'recipe_detail' recipe.id %}"></a>
-                    <div class="card h-100">
+                <div class="card h-100">
+                    <a href="{% url 'recipe_detail' recipe.id %}">
                         <div class="card-body text-center">
                             {% if recipe.image %}
                             <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-3">
@@ -93,8 +93,8 @@
                             <p class="mt-2"><strong>{{ recipe.favourites_count }}</strong> people have favorited this recipe
                             </p>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
             {% endfor %}
         </div>
