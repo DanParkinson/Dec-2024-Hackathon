@@ -308,7 +308,6 @@ Validation of HTML/CSS, Lighthouse Audits.
 <img src="static/images/recipes-lighthouse-performance.png">
 <img src="static/images/recipe-lighthouse-performance.png">
 <img src="static/images/signup-lighthouse-performance.png">
-<img src="static/images/Homepage-lighthouse-performance.png">
 <img src="static/images/login-lighthouse-performance.png">
 
 ### Python Testing
