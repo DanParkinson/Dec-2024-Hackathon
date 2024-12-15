@@ -1,6 +1,6 @@
 # Jingle Bites
 # Code Institute "December 2024 - HackTeam Takeover!" <a id="top"/>
-![logo](static/images/logo-4-+.png)
+![logo](static/images/logo-4-+.png)<br>
 [Jingle Bites](https://jingle-bites-28089fd21e29.herokuapp.com/)
 
 ## Introduction
@@ -31,10 +31,7 @@ The group Jingle Bites is composed of 7 students and alumini from different cour
 - [Deployment](#deployment)
 - [Testing](#testing)
 - [Credits](#credits)
-    - [Code References](code-references)
     - [Use of AI](use-of-ai)
-    - [Content References](content-references)
-    - [Media References](media-references)
     - [Acknowledgements](acknowledgements)
 
 [Back to top](#top)
@@ -73,6 +70,8 @@ In order to fully understand our users needs, we asked Microsoft Co-pilot to dra
   Sarah sometimes feels overwhelmed by the sheer number of recipes available without proper organization and wishes there were more ways to filter recipes by cooking time.<br>
   Her favorite features include browsing recipes by category, personalizing her user profile with a photo and bio, and saving and organizing favorite recipes.<br>
   Additionally, Sarah values the ability to filter recipes by cooking time and having easy-to-read formats for recipe instructions.
+
+[Back to top](#top)
 
 ## Project Plan
 Initially the group got together when the team was known after the first webinar. A repository was created and colaborators were adeed to allow different members to create their branches and work locally, as necessary.
@@ -138,6 +137,8 @@ This site was based on [PinchOfFun](https://pinchofyum.com/) website by suggesti
   <img src="static/images/contrast-check2.png">
   <img src="static/images/contrast-check3.png">
 
+[Back to top](#top)
+
 ### Typography
 For the body section of the webpage, font-family used was: "Poppins", sans-serif. Example of Poppins font [Google Fonts](https://fonts.google.com/specimen/Poppins?preview.text=Jingle%20Bites)<br>
 <img src="static/images/Jingle-Bites-poppins.png">
@@ -172,7 +173,6 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 ### Login
   <img src="static/images/login.png">
 
-
 [Back to top](#top)
 
 ## Responsive Design
@@ -185,6 +185,8 @@ Most of the content is responsive to different screen sizes as it was built usin
 - Filter Recipes bu Dietary Preferences
 - Search Recipes by Ingredient or Keyword
 - Share Recipes on Social Media
+
+[Back to top](#top)
 
 ## Technologies Used
 ### Languages and Technologies
@@ -277,6 +279,7 @@ Validation of HTML/CSS, Lighthouse Audits.
 - Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
 ![CSS_validation](static/images/base-css-validation.png)
 
+[Back to top](#top)
 
 ### Lighthouse Audit
 - Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility. <br>
@@ -288,35 +291,19 @@ Validation of HTML/CSS, Lighthouse Audits.
 <img src="static/images/Homepage-lighthouse-performance.png">
 <img src="static/images/login-lighthouse-performance.png">
 
-
 [Back to top](#top)
 
 ## Credits
-### Code References
-Many of th
-<br>
-Other re
-
 ### Use of AI
 #### Code Generation
-The GitHub Copilot extension was installed in our local versions of Visual Studio Code.
+The GitHub Copilot extension was installed in our local versions of Visual Studio Code. 
 
 #### Debugging
-Copilot was used for debugging code.
-
-#### Code Optimisation
-When coding more complicated logical 
-
-#### Impact on Workflow
-On the 
-
-### Content References
-
-
-### Media References
-
+Copilot was used for debugging code. EIther while using VS Code or when using Dev Tools and searching about errors.
 
 ### Acknowledgements
-Eve
+The team has communicated very well and different members had regular huddles to check about progress of the project, as well as when needed to check code or to resolve conflicts on the code or trying to merge changes to main repo.
+Different members were able to work in different parts, but also to help eachother with common tasks as needed/requested.
+There was a good cooperation in the team to get the site well done, which could be seen from the initial moment.
 
 [Back to top](#top)
