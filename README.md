@@ -157,26 +157,42 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 [Back to top](#top)
 
 ## Website Features
+
+### Common Features/Links to all pages
+- Nav bar has "Home", "About" and "Recipes" links on the left side that take user to this pages.
+- These links are also available on the footer, to give another option for the user to quickly move to a different page of the website.
+- On the right side of the Navbar the user can choose to "Register" on the site and create his/her account to post their own recipes and share them with other users.
+- The "Login" link allows the user to access the account previously created.
+- Access to Social Networks
+
 ### Homepage
-  <img src="static/images/homepage-final.png">
+  <img src="static/images/homepage-final.png"><br>
+- In this page the user can choose one of the 4 main categories "Starter, "Main", "Side" or Dessert" to see different recipes according to each category.
+- Also has some recomended recipes below the categories which will get the user to their description once selected.
 
 ### About
-  <img src="static/images/Homepage-about-1.png">
-  <img src="static/images/Homepage-about-2.png">
+  <img src="static/images/Homepage-about-1.png"><br>
+  <img src="static/images/Homepage-about-2.png"><br>
+- Information about the page.
 
 ### Recipes
-  <img src="static/images/recipes-1.png">
-  <img src="static/images/recipes-2.png">
+  <img src="static/images/recipes-1.png"><br>
+  <img src="static/images/recipes-2.png"><br>
+- Has a option menu "All Categories" that allows the user to choose from the categories mentioned above on the homepage and search for recipes.
+- Different recipes are available that the user can open by selecting/clicking in the area of the specific recipe, which slightly pops out to provide a visual output to the user that is ready to go to another page.
 
 ### Recipe
-  <img src="static/images/recipe-1.png">
-  <img src="static/images/recipe-2.png">
+  <img src="static/images/recipe-1.png"><br>
+  <img src="static/images/recipe-2.png"><br>
+- Description of the recipe selected: title, brief description, ingredients, how to prepare the recipe and how many users liked the recipe.
 
 ### Register
-  <img src="static/images/signup.png">
+  <img src="static/images/signup.png"><br>
+- Requests different details to the user to create a personal account.
 
 ### Login
-  <img src="static/images/login.png">
+  <img src="static/images/login.png"><br>
+- Allows the user to access the account created.
 
 [Back to top](#top)
 
