@@ -73,34 +73,5 @@
     </div>
 </div>
 
-<!-- All Recipes List Section -->
-<div class="container pb-5">
-    <h2 class="text-center mb-4">All Recipes</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        {% for recipe in recipes %}
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                {% if recipe.image %}
-                <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="card-img-top"
-                    style="height: 200px; object-fit: cover;">
-                {% else %}
-                <div class="bg-light text-center p-4">
-                    <p class="text-muted mb-0">No image available</p>
-                </div>
-                {% endif %}
 
-                <div class="card-body">
-                    <h3 class="card-title h5">{{ recipe.title }}</h3>
-                    <p class="card-text">{{ recipe.description|truncatewords:30 }}</p>
-                    <a href="../detail/{{recipe.id}}" class="btn btn-primary w-100">View Recipe</a>
-                </div>
-            </div>
-        </div>
-        {% empty %}
-        <div class="col-12 text-center">
-            <p class="text-muted">No recipes available.</p>
-        </div>
-        {% endfor %}
-    </div>
-</div>
 {% endblock %}
