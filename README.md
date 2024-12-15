@@ -1,6 +1,6 @@
 # Jingle Bites
 # JavaScript Group Hackathon Project <a id="top"/>
-![logo](https:/)
+![logo](static/images/logo-4-+.png)
 
 
 ## Introduction
@@ -131,13 +131,15 @@ This site was based on [PinchOfFun](https://pinchofyum.com/) website by suggesti
   <img src="static/images/coloor-palette.png">
 
 - Contrast check <br>
+  Contrast was checked using [WebAIM](https://webaim.org/resources/contrastchecker/)<br>
+  
   <img src="static/images/contrast-check1.png">
   <img src="static/images/contrast-check2.png">
   <img src="static/images/contrast-check3.png">
 
 ### Typography
 No Google fonts were used on the website.
-For the body section of the webpage, font-family used was: "Poppins", sans-serif. Example of Poppins font [Google Fonts](https://fonts.google.com/specimen/Poppins?preview.text=Jingle%20Bites)
+For the body section of the webpage, font-family used was: "Poppins", sans-serif. Example of Poppins font [Google Fonts](https://fonts.google.com/specimen/Poppins?preview.text=Jingle%20Bites)<br>
 <img src="static/images/Jingle-Bites-poppins.png">
 
 For the Logo, font-family used was: "Brush Script MT", cursive. Example of "Brush Script MT" font from [Microsoft](https://learn.microsoft.com/en-us/typography/font-list/brush-script-mt)
