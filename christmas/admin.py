@@ -11,7 +11,8 @@ class RecipeAdmin(SummernoteModelAdmin):
                     'status',
                     'title',
                     'category',
-                    'recommended',)
+                    'recommended',
+                    'servings',)
     list_editable = ('recommended',)
     search_fields = ['author', 'status']
     list_filter = ('author', 'status', 'category','recommended')

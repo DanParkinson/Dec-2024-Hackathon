@@ -33,6 +33,7 @@ class Recipe(models.Model):
         max_length=10, choices=CATEGORY_CHOICES, default='Main'
     )
     recommended = models.BooleanField(default=False)
+    servings = models.IntegerField(help_text="Number of servings", default=4)
 
     def get_ingredients_list(self):
         """

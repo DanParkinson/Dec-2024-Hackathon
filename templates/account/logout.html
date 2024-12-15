@@ -1,16 +1,29 @@
-{% extends "base.html" %}  <!-- Extends your site's base template -->
+{% extends "base.html" %}
 
 {% block title %}Confirm Logout{% endblock %}
 
 {% block content %}
-<div class="logout-container">
-    <h1>Are you sure you want to log out?</h1>
-
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-danger">Yes, Log Out</button>
-    </form>
-
-    <p><a href="/">Cancel</a></p>
-</div>
+<section class="form-section container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
+            <div class="card shadow">
+                <div class="card-header bg-white">
+                    <h2 class="about-recipes">Confirm Logout</h2>
+                    <p class="about-the-recipes">
+                        Are you sure you want to log out of your account?
+                    </p>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="mt-4 d-flex justify-content-center">
+                            <button type="submit" class="btn red-btn me-2">Yes, Log Out</button>
+                            <a href="/" class="btn gray-btn">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

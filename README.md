@@ -1,6 +1,6 @@
 # Jingle Bites
 # JavaScript Group Hackathon Project <a id="top"/>
-![logo](https:/)
+![logo](static/images/logo-4-+.png)
 
 
 ## Introduction
@@ -21,12 +21,9 @@ The group Jingle Bites is composed of 7 students and alumini from different cour
     - [Imagery](#imagery)
 - [Website Features](#website-features)
     - [Homepage](#homepage)
-    - [Rules modal](#rules-modal)
     - [Categories Page](#categories-page)
-    - [Quiz Page](#quiz-page)
     - [Results Page](#results-page)
     - [Single Javascript Makes Multiple Pages](#single-javascript-makes-multiple-pages)
-    - [Question Bank](#question-bank)
     - [Footer](#footer)
 - [Responsive Design](#responsive-design)
 - [Future Features](#future-features)
@@ -83,22 +80,22 @@ After this, different the repo, a project board was also created on GitHubOn the
 
 ### User Stories
 Here are all the user stories that have been prioritised (all must have and some should have ones) for the current implementation of the site:
-| User Stories                                    | MoSCoW priority           |  Status |
-| ----------------------------------------------- |:-------------------------:| -------:|
-| Post own recipes                                | must have                 |   Done  |
-| Edit and Delete Recipes                         | should have               |   Done  |
-| User Profile with Photo and Bio                 | could have                |   Done  |
-| Browse Recipes by Category                      | must have                 |   Done  |
-| Save Favourite Recipes                          | should have               |   Done  |
-| User-Friendly Navigation                        | must have                 |   Done  |
-| Appealing and Simple Design                     | must have                 |   Done  |
-| Responsive Design                               | must have                 |   Done  |
-| Share Recipes on Social Media                   | could have                |   Done  |
-| Search Recipes by Ingredient or Keyword         | could have                |   Done  |
-| Filter Recipes by Dietary Preferences           | could have                |   Done  |
-| Rate and Review Recipes                         | could have                |   Done  |
-| Admin Moderation and Management                 | could have                |   Done  |
-| Print or Save Recipes as PDF                    | could have                |   Done  |
+| User Stories                                    | MoSCoW priority           |  Status  |
+| ----------------------------------------------- |:-------------------------:| --------:|
+| Post own recipes                                | must have                 |   Done   |
+| Edit and Delete Recipes                         | should have               |   Done   |
+| User Profile with Photo and Bio                 | could have                |   Done   |
+| Browse Recipes by Category                      | must have                 |   Done   |
+| Save Favourite Recipes                          | should have               |   Done   |
+| User-Friendly Navigation                        | must have                 |   Done   |
+| Appealing and Simple Design                     | must have                 |   Done   |
+| Responsive Design                               | must have                 |   Done   |
+| Share Recipes on Social Media                   | could have                | Not Done |
+| Search Recipes by Ingredient or Keyword         | could have                | Not Done |
+| Filter Recipes by Dietary Preferences           | could have                | Not Done |
+| Rate and Review Recipes                         | could have                | Not Done |
+| Admin Moderation and Management                 | could have                | Not Done |
+| Print or Save Recipes as PDF                    | could have                | Not Done |
 
 
 All user stories were logged on the [GitHub Project Board](https://github.com/users/Francisca-Heii/projects/7) on GitHub repo, along with the assessment criteria and expected performance for the Hackathon, which were also prioritised as must-have, should-have and could-have.
@@ -108,28 +105,47 @@ As well as using the Project Board to track progress on our project, we also use
 [Back to top](#top)
 
 ### Wireframes
-Initial layout of website:
+Initial layout of website in different devices:
 
 - Mobile view:<br>
-  <img src="">
+  <img src="static/images/Wireframe-mobile-view.png">
   
 - Tablet view:<br>
-  <img src="">
+  <img src="static/images/Wireframe-tablet-view.png">
   
 - Desktop/Laptop view:<br>
-  <img src="">
+  <img src="static/images/Wireframe-desktop-homepage1.png">
+  <img src="static/images/Wireframe-desktop-about1.png">
+  <img src="static/images/Wireframe-desktop-recipe1.png">
 
 [Back to top](#top)
 
 ## Design
 ### Colour Scheme
-We 
+This site was based on [PinchOfFun](https://pinchofyum.com/) website by suggestion of a team member and after discussion within the group.
+
+- Colour Palette <br>
+  Done using [coolors](https://coolors.co/)<br>
+
+  <img src="static/images/coloor-palette.png">
 
 - Contrast check <br>
-  <img src="">
+  Contrast was checked using [WebAIM](https://webaim.org/resources/contrastchecker/)<br>
+  
+  <img src="static/images/contrast-check1.png">
+  <img src="static/images/contrast-check2.png">
+  <img src="static/images/contrast-check3.png">
 
 ### Typography
-Initial website font-family 
+
+For the body section of the webpage, font-family used was: "Poppins", sans-serif. Example of Poppins font [Google Fonts](https://fonts.google.com/specimen/Poppins?preview.text=Jingle%20Bites)<br>
+<img src="static/images/Jingle-Bites-poppins.png">
+
+For the Logo, font-family used was: "Brush Script MT", cursive. Example of "Brush Script MT" font from [Microsoft](https://learn.microsoft.com/en-us/typography/font-list/brush-script-mt)
+<img src="static/images/brush-script.png">
+
+For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif. Style example of "Segoe UI" from [Microsoft](https://learn.microsoft.com/en-us/typography/font-list/segoe-ui) 
+<img src="static/images/segoe-ui.png">
 
 ### Imagery
 - B image<br>
@@ -155,7 +171,11 @@ Most of the content is responsive to different screen sizes as it was built usin
 ![amiresponsive](https:/)
 
 ## Future Features
-- Ti
+- Print or Save Recipes as PDF
+- Admin Moderation and Management
+- Filter Recipes bu Dietary Preferences
+- Search Recipes by Ingredient or Keyword
+- Share Recipes on Social Media
 
 ## Technologies Used
 ### Languages and Technologies
@@ -163,18 +183,27 @@ Most of the content is responsive to different screen sizes as it was built usin
 ![Static Badge](https://img.shields.io/badge/CSS3-Language-blue)
 ![Static Badge](https://img.shields.io/badge/GitHub-RepoHosting-black)
 ![Static Badge](https://img.shields.io/badge/Gitpod-IDE-yellow)
+![Static Badge](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Static Badge](https://img.shields.io/badge/JavaScript-323330?style=flat&logo=javascript&logoColor=F7DF1E)
 
 ### Libraries
-![Static Badge](https://img.shields.io/badge/Bootstrap-5.3-purple)
 ![Static Badge](https://img.shields.io/badge/FontAwesome-icons-navy)
 ![Static Badge](https://img.shields.io/badge/GoogleFonts-Typography-blue)
 
 ### Tools and Programs
-![Static Badge](https://img.shields.io/badge/LogoAI-LogoGenerator-red)
 ![Static Badge](https://img.shields.io/badge/Favicon.io-icons-navy)
 ![Static Badge](https://img.shields.io/badge/Balsamiq-Wireframes-green)
 ![Static Badge](https://img.shields.io/badge/MSCopilot-AI-orange)
 ![Static Badge](https://img.shields.io/badge/GitHubCopilot-AI-orange)
+
+### Frameworks
+![Static Badge](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
+![Static Badge](static/images/cloudinary-squareLogo.webp)
+
+### DataBases
+![Static Badge](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+
 
 [Back to top](#top)
 
@@ -193,7 +222,7 @@ Once the MVP has been created in Gitpod, go to GitHub Pages to make an early dep
 [Back to top](#top)
 
 ## Testing
-Validation of HTML/CSS, Lighthouse Audits, Bugs
+Validation of HTML/CSS, Lighthouse Audits.
 
 ### HTML Validation
 - Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed. No errors found after fixing.
@@ -202,13 +231,11 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 ### CSS Validation
 
 - Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
-![CSS_validation](https://github.com/user-attachments/assets/367ad92f-280d-4632-8f4a-f6b14cc4145d)
+![CSS_validation](static/images/base-css-validation.png)
 
 
 ### Lighthouse Audit
 - Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility. 
-
-### JSHint Linter
 
 
 ### Bugs yet to be Fixed
@@ -227,7 +254,7 @@ Other re
 The GitHub Copilot extension was installed in our local versions of Visual Studio Code.
 
 #### Debugging
-Copilot was regularly used for debugging code 
+Copilot was used for debugging code.
 
 #### Code Optimisation
 When coding more complicated logical 
