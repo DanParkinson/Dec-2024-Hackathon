@@ -1,72 +1,83 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
 <h1 class="about-me">About Jingle Bites</h1>
-<div class="image-container">
-  <img
-    src="#"
-    style="width: 600px; height: 250px; border-radius: 10px"
-    alt="blog Image"
-    class="blog-image"
-  />
-</div>
+<!--Hero Image -->
+<section class="card-section">
+    <div class="new-card-container">
+        <!-- New Card at the top with only image -->
+        <div class="top-card new-card">
+            <div class="card-content">
+                <img src="{% static 'images/first-Container-imge.jpeg' %}" alt="New Card Image" /> 
+            </div>
+        </div>
+    </div>
+</section>
+
 <br /><br />
-<h2 class="about-page">About The Page</h2>
-<p class="about-this-page">
-  Welcome to Jingle Bites, your one-stop destination for all things delicious
-  this holiday season! Designed with love by Jingle Bites Team developers, this
-  website brings you a curated collection of festive Christmas recipes. Whether
-  you're looking for classic holiday treats, innovative desserts, or hearty
-  family meals, Jingle Bites has something for everyone. Our goal is to spread
-  the joy of cooking and make your holiday preparations easy, fun, and
-  memorable. Explore, cook, and celebrate with us this Christmas!
-</p>
+
+<section>
+    <h2 class="about-page">About The Page</h2>
+    <p class="about-this-page">
+    Welcome to Jingle Bites, your one-stop destination for all things delicious
+    this holiday season! Designed with love by Jingle Bites Team developers, this
+    website brings you a curated collection of festive Christmas recipes. Whether
+    you're looking for classic holiday treats, innovative desserts, or hearty
+    family meals, Jingle Bites has something for everyone. Our goal is to spread
+    the joy of cooking and make your holiday preparations easy, fun, and
+    memorable. Explore, cook, and celebrate with us this Christmas!
+    </p>
+    <br /><br />
+    <div class="image-container">
+    <img
+        src="#"
+        style="border-radius: 10px"
+        alt="christmas Image"
+        class="christmas-image"
+    />
+    </div>
+</section>
+
 <br /><br />
-<div class="image-container">
-  <img
-    src="#"
-    style="border-radius: 10px"
-    alt="christmas Image"
-    class="christmas-image"
-  />
-</div>
-<br /><br />
-<h2 class="about-recipes">About The Recipes</h2>
-<p class="about-the-recipes">
-  Jingle Bites brings the magic of Christmas to your table with a delightful
-  collection of festive recipes. Whether you're hosting a family feast or
-  looking for quick treats, our recipes are designed to make your holiday
-  cooking joyful and memorable.
-</p>
-<br /><br />
-<div class="image-container">
-  <img
-    src="{% static 'images/chrismas1.png' %}"
-    style="
-      width: 250px;
-      height: 175px;
-      padding-right: 20px;
-      border-radius: 10px;
-    "
-    alt="Recipe Image 1"
-    class="recipe-image-1"
-  />
-  <img
-    src="#"
-    style="
-      width: 250px;
-      height: 175px;
-      padding-right: 20px;
-      border-radius: 10px;
-    "
-    alt="Recipe Image 2"
-    class="recipe-image-2"
-  />
-  <img
-    src="#"
-    style="width: 250px; height: 175px; border-radius: 10px"
-    alt="Recipe Image 3"
-    class="recipe-image-3"
-  />
-</div>
+
+<section>
+    <h2 class="about-recipes">About The Recipes</h2>
+    <p class="about-the-recipes">
+    Jingle Bites brings the magic of Christmas to your table with a delightful
+    collection of festive recipes. Whether you're hosting a family feast or
+    looking for quick treats, our recipes are designed to make your holiday
+    cooking joyful and memorable.
+    </p>
+    <br /><br />
+    <div class="image-container">
+    <img
+        src="{% static 'images/chrismas1.png' %}"
+        style="
+        width: 250px;
+        height: 175px;
+        padding-right: 20px;
+        border-radius: 10px;
+        "
+        alt="Recipe Image 1"
+        class="recipe-image-1"
+    />
+    <img
+        src="{% static 'images/chrismas2.png' %}"
+        style="
+        width: 250px;
+        height: 175px;
+        padding-right: 20px;
+        border-radius: 10px;
+        "
+        alt="Recipe Image 2"
+        class="recipe-image-2"
+    />
+    <img
+        src="{% static 'images/chrismas3.png' %}"
+        style="width: 250px; height: 175px; border-radius: 10px"
+        alt="Recipe Image 3"
+        class="recipe-image-3"
+    />
+    </div>
+</section>
 
 {% endblock %}

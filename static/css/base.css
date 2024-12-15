@@ -1,3 +1,4 @@
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -16,20 +17,15 @@ body {
   min-height: 100vh;
 }
 
-
 main {
   /* Pushes the footer to the bottom */
-  flex: 1; 
+  flex: 1;
 }
 
 /* Footer styling */
 footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
+  margin-top: 20px;
 }
-
-
 
 /* ///// //////// ....Navbar  css code Start from here.........///////////////// */
 
@@ -418,6 +414,43 @@ h1 {
 }
 
 /* .../////////// card css end here ///////////////// */
+
+/* ////////////////////// About //////////////////// */
+.about-me {
+  font-size: 50px;
+  margin-top: 2px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about-page,
+.about-recipes {
+  font-size: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-image {
+  width: 50%;
+}
 
 /* ///////////// Footer code Start from here /////////////// */
 
