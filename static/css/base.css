@@ -22,6 +22,12 @@ main {
   flex: 1;
 }
 
+a { 
+  /* removed defualt stylings of links */
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Footer styling */
 footer {
   margin-top: 20px;

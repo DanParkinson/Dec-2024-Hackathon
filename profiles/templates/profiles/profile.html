@@ -14,25 +14,27 @@
     <div class="container mt-4">
         <h2 class="mb-2">My Recipes</h2>
         <div class="row">
-        {% for recipe in recipes %}
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        {% if recipe.image %}
-                        <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-3">
-                        {% else %}
-                        <p>No image available.</p>
-                        {% endif %}
-                        <h3 class="card-title">{{ recipe.title }}</h3>
-                        <div class="card-details mt-2 justify-content-center">
-                            <i class="fas fa-users"></i>
-                            <span>4</span>
-                            <i class="fas fa-clock ms-3"></i>
-                            <span>{{ recipe.cooking_time }}</span>
+            {% for recipe in recipes %}
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <a href="{% url 'recipe_detail' recipe.id %}">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                {% if recipe.image %}
+                                <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-3">
+                                {% else %}
+                                <p>No image available.</p>
+                                {% endif %}
+                                <h3 class="card-title">{{ recipe.title }}</h3>
+                                <div class="card-details mt-2 justify-content-center">
+                                    <i class="fas fa-users"></i>
+                                    <span>4</span>
+                                    <i class="fas fa-clock ms-3"></i>
+                                    <span>{{ recipe.cooking_time }}</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-            </div>
             {% endfor %}
         </div>
     </div>
@@ -49,33 +51,35 @@
         <div class="row">
             {% for recipe in favourite_recipes %}
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <!-- Recipe Image -->
-                        {% if recipe.image %}
-                        <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-3">
-                        {% else %}
-                        <p>No image available.</p>
-                        {% endif %}
-                        
-                        <!-- Recipe Title -->
-                        <h3 class="card-title mb-3">{{ recipe.title }}</h3>
-                        <br>
-                        <!-- Toggle Favourite Button -->
-                        <div class="mt-3">
-                            <form method="POST" action="{% url 'toggle_favourite' recipe.id %}">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-danger">
-                                    {% if user in recipe.favourites.all %}
-                                        Unfavourite
-                                    {% else %}
-                                        Favourite
-                                    {% endif %}
-                                </button>
-                            </form>
+                <a href="{% url 'recipe_detail' recipe.id %}">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <!-- Recipe Image -->
+                            {% if recipe.image %}
+                            <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-3">
+                            {% else %}
+                            <p>No image available.</p>
+                            {% endif %}
+                            
+                            <!-- Recipe Title -->
+                            <h3 class="card-title mb-3">{{ recipe.title }}</h3>
+                            <br>
+                            <!-- Toggle Favourite Button -->
+                            <div class="mt-3">
+                                <form method="POST" action="{% url 'toggle_favourite' recipe.id %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger">
+                                        {% if user in recipe.favourites.all %}
+                                            Unfavourite
+                                        {% else %}
+                                            Favourite
+                                        {% endif %}
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>   
+                </a>   
             </div>
             {% endfor %}
         </div>
