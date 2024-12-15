@@ -22,6 +22,12 @@ main {
   flex: 1;
 }
 
+a { 
+  /* removed defualt stylings of links */
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Footer styling */
 footer {
   margin-top: 20px;
@@ -52,6 +58,20 @@ footer {
   font-family: "Brush Script MT", cursive; /* Cursive font */
   cursor: pointer;
 }
+
+/* Favourite buttons */
+.favorited {
+  color: red;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.favorited:hover {
+    color: white;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
 @media (max-width: 768px) {
   .logo-text {
     font-size: 24px; /* Slightly smaller for tablets */
@@ -102,6 +122,7 @@ footer {
   height: 3px;
   background-color: #f8f9fa;
 }
+  
 
 @media (max-width: 768px) {
   .navbar .menu {
@@ -244,6 +265,33 @@ h1 {
   justify-content: center;
   margin-bottom: 20px;
 }
+
+.recipe-image:hover {
+  transform: scale(1.05);
+}
+
+/* card animations */
+.recipe-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow effect */
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+.recipe-card:hover {
+  transform: scale(1.05); /* Grow the card by 5% on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.recipe-card-body img {
+  max-width: 100%; /* Ensure image is responsive */
+  border-radius: 10px; /* Match the card's rounded corners */
+}
+
+.recipe-card-body h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+/* end card animations */
 
 .card-recipe {
   min-height: 40vh;
@@ -451,6 +499,9 @@ h1 {
 .blog-image {
   width: 50%;
 }
+
+/* ////////////////////// Profile spage ////////////////// */
+
 
 /* ///////////// Footer code Start from here /////////////// */
 
