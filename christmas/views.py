@@ -17,17 +17,14 @@ def recipes(request):
     if request.GET:
         # Search Query
         if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
-                messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('recipes'))
-
-            queries = Q(title__icontains=query) | Q(description__icontains=query)
-            recipes_list = recipes_list.filter(queries)
+            query = request.GET['q'].strip()
+            if query:
+                queries = Q(title__icontains=query) | Q(description__icontains=query)
+                recipes_list = recipes_list.filter(queries)
 
         # Category filtering
         if 'category' in request.GET:
-            category = request.GET['category']
+            category = request.GET['category'].strip()
             if category:
                 recipes_list = recipes_list.filter(category=category)
 
