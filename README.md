@@ -1,6 +1,7 @@
 # Jingle Bites
 # Code Institute "December 2024 - HackTeam Takeover!" <a id="top"/>
-![logo](static/images/logo-4-+.png)<br>
+
+<img src="static/images/responsive-design.png"><br>
 [Jingle Bites](https://jingle-bites-28089fd21e29.herokuapp.com/)
 
 ## Introduction
@@ -17,6 +18,7 @@ The group Jingle Bites is composed of 7 students and alumini from different cour
 - [Wireframes](#wireframes)
 - [Design](#design)
     - [Colour Scheme](#colour-scheme)
+    - [Logo](#logo)
     - [Typography](#typography)
 - [Website Features](#website-features)
     - [Homepage](#homepage)
@@ -137,6 +139,9 @@ This site was based on [PinchOfFun](https://pinchofyum.com/) website by suggesti
   <img src="static/images/contrast-check2.png">
   <img src="static/images/contrast-check3.png">
 
+### Logo
+![logo](static/images/logo-4-+.png)<br>
+
 [Back to top](#top)
 
 ### Typography
@@ -176,8 +181,7 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 [Back to top](#top)
 
 ## Responsive Design
-
-![Responsive Design](static/images/static/images/responsive-design.png)
+Respomsive Desgin of the content was built using components from the Bootstrap Library and CSS Media queries.
 
 ## Future Features
 - Print or Save Recipes as PDF
