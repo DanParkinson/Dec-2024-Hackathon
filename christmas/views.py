@@ -54,7 +54,6 @@ def recipes(request):
 
     return render(request, 'christmas/recipes.html', context)
 
-
 def recipe_detail(request, id):
     """Renders details of a single recipe to recipie_detail.html"""
     recipe = get_object_or_404(Recipe, id=id)
@@ -142,3 +141,4 @@ def toggle_favourite(request, id):
 
     # Redirect back to the previous page, passing the is_favorited flag
     return redirect(request.META.get('HTTP_REFERER', 'recipe-list') + f"?favorited={not is_favorited}")
+
