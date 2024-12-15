@@ -1,6 +1,7 @@
 # Jingle Bites
 # Code Institute "December 2024 - HackTeam Takeover!" <a id="top"/>
 ![logo](static/images/logo-4-+.png)
+[Jingle Bites](https://jingle-bites-28089fd21e29.herokuapp.com/)
 
 ## Introduction
 The present website was done as part of the December Hackathon organised by Code Institute (CI) in 2024.
@@ -17,7 +18,6 @@ The group Jingle Bites is composed of 7 students and alumini from different cour
 - [Design](#design)
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
-    - [Imagery](#imagery)
 - [Website Features](#website-features)
     - [Homepage](#homepage)
     - [Categories Page](#categories-page)
@@ -138,7 +138,6 @@ This site was based on [PinchOfFun](https://pinchofyum.com/) website by suggesti
   <img src="static/images/contrast-check3.png">
 
 ### Typography
-
 For the body section of the webpage, font-family used was: "Poppins", sans-serif. Example of Poppins font [Google Fonts](https://fonts.google.com/specimen/Poppins?preview.text=Jingle%20Bites)<br>
 <img src="static/images/Jingle-Bites-poppins.png">
 
@@ -147,10 +146,6 @@ For the Logo, font-family used was: "Brush Script MT", cursive. Example of "Brus
 
 For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif. Style example of "Segoe UI" from [Microsoft](https://learn.microsoft.com/en-us/typography/font-list/segoe-ui) 
 <img src="static/images/segoe-ui.png">
-
-### Imagery
-- B image<br>
-  <img src="">
 
 [Back to top](#top)
 
@@ -165,6 +160,10 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 ### Recipes
   <img src="static/images/recipes-1.png">
   <img src="static/images/recipes-2.png">
+
+### Recipe
+  <img src="static/images/recipe-1.png">
+  <img src="static/images/recipe-2.png">
 
 ### Register
   <img src="static/images/signup.png">
@@ -218,15 +217,22 @@ Most of the content is responsive to different screen sizes as it was built usin
 
 ## Deployment
 
-The process is as follows:
-1. Login to your GitHub profile.
-2. Go to the [Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template).
-3. Click **Use this template** and then **Create a new repository**.
-4. Enter the repo name and choose to create from template
-5. Click **Open** with the Gitpod logo to open the Code Institute IDE workspace.
-6. Open VS Code locally and click on Gitpod logo on the left. Click on right arrow next to the workspace you want to work on.
- 
-Once the MVP has been created in Gitpod, go to GitHub Pages to make an early deployment of the project, so that testing can be done in Dev Tools to highlight key issues that need to be resolve early on in the project.
+Heroku deployment process:
+  - Create a Heroku Account: Sign up for a Heroku account at Heroku if you don't already have one.
+  - Install Heroku CLI: Download and install the Heroku Command Line Interface (CLI) on your local machine.
+  - Log in to Heroku: Open your terminal and log in to your Heroku account using the command:
+      - heroku login
+  - Initialize a Git Repository: If your project isn't already in a Git repository, initialize one:
+      - git init
+  - Add and Commit Your Code: Add your project files to the repository and commit them:
+      - git add .
+      - git commit -m "Initial commit"
+  - Create a Heroku App: Create a new app on Heroku:
+      - heroku create
+  - Deploy Your Application: Push your code to Heroku:
+      - git push heroku master
+  - Open Your Application: Once the deployment is complete, open your app using:
+      - heroku open
 
 [Back to top](#top)
 
