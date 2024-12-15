@@ -265,6 +265,33 @@ h1 {
   margin-bottom: 20px;
 }
 
+.recipe-image:hover {
+  transform: scale(1.05);
+}
+
+/* card animations */
+.recipe-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow effect */
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+.recipe-card:hover {
+  transform: scale(1.05); /* Grow the card by 5% on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.recipe-card-body img {
+  max-width: 100%; /* Ensure image is responsive */
+  border-radius: 10px; /* Match the card's rounded corners */
+}
+
+.recipe-card-body h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+/* end card animations */
+
 .card-recipe {
   min-height: 40vh;
 }
