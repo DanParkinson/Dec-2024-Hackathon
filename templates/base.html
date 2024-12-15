@@ -47,42 +47,40 @@
 </head>
 
 <body>
+    <div class="wrapper">
     <!-- header -->
     <header>
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="{% url 'home' %}">Logo Here</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="{% url 'home' %}">Jingle Bites</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link" href="{% url 'home' %}">Page 1</a>
-                <a class="nav-item nav-link" href="{% url 'about' %}">Page 2</a>
-                <a class="nav-item nav-link" href="{% url 'recipes' %}">Page 3</a>
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                  <a class="nav-link {% if request.path == logout_url %}active{% endif %}" 
-                     aria-current="page" 
-                     href="{% url 'account_logout' %}">
-                    Logout
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'profile' %}">Profile</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                  <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                    href="{% url 'account_signup' %}">Register</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
-                </li>
-                {% endif %}
+                  <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+                  <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
+                  <a class="nav-item nav-link" href="{% url 'recipes' %}">Recipes</a>
+                  {% if user.is_authenticated %}
+                      <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                      <a class="nav-item nav-link" href="{% url 'add_recipe' %}">Create a recipe</a>
+                  {% endif %}
               </div>
-            </div>
-          </nav>
+              <div class="navbar-nav ms-auto">
+                  {% if user.is_authenticated %}
+                      <a class="nav-item nav-link {% if request.path == logout_url %}active{% endif %}" 
+                          aria-current="page" 
+                          href="{% url 'account_logout' %}">
+                          Logout
+                      </a>
+                  {% else %}
+                      <a class="nav-item nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                          href="{% url 'account_signup' %}">Register</a>
+                      <a class="nav-item nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                  {% endif %}
+              </div>
+          </div>
+      </nav>
     </header>
 
     <!-- Toast -->
@@ -112,8 +110,41 @@
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Footer Logo -->
+            <!-- <div class="footer-logo">
+          <img src="https://via.placeholder.com/50" alt="Logo" />
+        </div> -->
+
+            <!-- Footer Navigation Menu -->
+            <div class="footer-menu">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <img src="images/fb-new1.jpg" alt="Facebook" />
+                </a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                    <img src="images/twitter-icon.png" alt="Twitter" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram.jpg" alt="Instagram" />
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jingle Bites. All Rights Reserved.</p>
+            <p>Designed by <a href="#" class="footer-designer">Jingle Bites Team</a></p>
+        </div>
     </footer>
+    </div>
 
     {% block postloadjs %}
     {{ block.super }}
@@ -124,5 +155,6 @@
     </script>
     {% endblock %}
 </body>
+
 
 </html>
