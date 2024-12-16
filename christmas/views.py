@@ -4,6 +4,7 @@ from django.contrib import messages
 from .models import Recipe, CATEGORY_CHOICES
 from .forms import RecipeForm
 from django.db.models import Q, Count
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
 def recipes(request):
@@ -32,17 +33,30 @@ def recipes(request):
     if not recipes_list.exists():
         no_results = True
 
+    # Pagination setup
+    paginator = Paginator(recipes_list, 6)
+    page = request.GET.get('page')
+
+    try:
+        paginated_recipes = paginator.page(page)
+    except PageNotAnInteger:
+        paginated_recipes = paginator.page(1)
+    except EmptyPage:
+        paginated_recipes = paginator.page(paginator.num_pages)
+
     # Add the is_favorited flag to each recipe (only if user is authenticated)
     if request.user.is_authenticated:
-        for recipe in recipes_list:
-            recipe.is_favorited = recipe.favourites.filter(id=request.user.id).exists()  # noqa
+        for recipe in paginated_recipes:
+            recipe.is_favorited = recipe.favourites.filter(
+                id=request.user.id).exists()
     else:
-        # If the user is not authenticated, set `is_favorited` to False for all recipes  # noqa
-        for recipe in recipes_list:
+        # If the user is not authenticated, set `is_favorited`
+        # to False for all recipes
+        for recipe in paginated_recipes:
             recipe.is_favorited = False
 
     context = {
-        'recipes': recipes_list,
+        'recipes': paginated_recipes,
         'search_term': query,
         'current_category': category,
         'category_choices': CATEGORY_CHOICES,
