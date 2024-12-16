@@ -5,8 +5,8 @@
 [Jingle Bites](https://jingle-bites-28089fd21e29.herokuapp.com/)
 
 ## Introduction
-The present website was done as part of the December Hackathon organised by Code Institute (CI) in 2024.
-The initial idea for the group project was to do a site to show recipes to the users and allow them to also input their recipes on the site.
+The present website was done as part of the December Hackathon organised by Code Institute (CI) in 2024.<br>
+The initial idea for the group project was to do a site to show recipes to the users and allow them to also input their recipes on the site.<br>
 The group Jingle Bites was composed of 6 elements, including current students and alumni from different courses by CI.
 
 ## Table of Contents
@@ -35,6 +35,7 @@ The group Jingle Bites was composed of 6 elements, including current students an
 - [Credits](#credits)
     - [Use of AI](use-of-ai)
     - [Acknowledgements](acknowledgements)
+    - [Gorup Members](#group-members)
 
 [Back to top](#top)
 
@@ -330,5 +331,13 @@ Copilot was used sometimes for debugging code. Either while using VS Code or whe
 The team has communicated very well and different members had regular huddles to check about progress of the project, as well as when needed to check code or to resolve conflicts on the code or trying to merge changes to main repo.
 Different members were able to work in different parts, but also to help eachother with common tasks as needed/requested.
 There was a good cooperation in the team to get the site well done, which could be seen from the initial moment.
+
+### Group Members
+- https://github.com/ewradcliffe
+- https://github.com/DanParkinson
+- https://github.com/Lauren21717
+- https://github.com/Francisca-Heii
+- https://github.com/JyotiHambir-BC
+- https://github.com/Carlos-n21
 
 [Back to top](#top)
