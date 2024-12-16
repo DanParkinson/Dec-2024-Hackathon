@@ -27,6 +27,8 @@ The group Jingle Bites was composed of 6 elements, including current students an
     - [Recipe](#recipe)
     - [Register](#register)
     - [Login](#login)
+    - [Profile](#profile)
+    - [New Recipe](#new-recipe)
 - [Responsive Design](#responsive-design)
 - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
@@ -178,6 +180,8 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
   <img src="static/images/Homepage-about-2.png"><br>
 - Information about the website.
 
+[Back to top](#top)
+
 ### Recipes
   <img src="static/images/recipes-1.png"><br>
   <img src="static/images/recipes-2.png"><br>
@@ -185,17 +189,27 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 - Different recipes are available, that the user can open by selecting/clicking in the area of the specific recipe, which slightly pops out to provide a visual output to the user that is ready to go to another page.
 
 ### Recipe
-  <img src="static/images/recipe-1.png"><br>
-  <img src="static/images/recipe-2.png"><br>
+  <img src="static/images/recipe-details.png"><br>
 - Description of the recipe selected: title, brief description, ingredients, how to prepare the recipe and how many users liked the recipe.
 
 ### Register
   <img src="static/images/signup.png"><br>
 - Requests different details to the user to create a personal account.
 
+[Back to top](#top)
+
 ### Login
   <img src="static/images/login.png"><br>
 - Allows the user to access the account created.
+
+### Profile
+  <img src="static/images/profile-view.png"><br>
+- View of the user profile page.
+
+### New Recipe
+  <img src="static/images/new-recipe1.png"><br>
+  <img src="static/images/new-recipe2.png"><br>
+- View of the form to add a new recipe to the website.
 
 [Back to top](#top)
 
