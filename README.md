@@ -180,6 +180,8 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
   <img src="static/images/Homepage-about-2.png"><br>
 - Information about the website.
 
+[Back to top](#top)
+
 ### Recipes
   <img src="static/images/recipes-1.png"><br>
   <img src="static/images/recipes-2.png"><br>
@@ -194,6 +196,8 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 ### Register
   <img src="static/images/signup.png"><br>
 - Requests different details to the user to create a personal account.
+
+[Back to top](#top)
 
 ### Login
   <img src="static/images/login.png"><br>
