@@ -8,7 +8,7 @@
 
 {% block content %}
 <!-- Main Content -->
-<div class="main-body-catergory">
+<div class="main-body-category">
   <div class="container-category-container">
     <div class="text-content">
       <h1>{{ recipe.title }}</h1>
@@ -21,7 +21,8 @@
           <span>{{ recipe.cooking_time }}</span>
           {% if user.is_authenticated %}
           <a href="{% url 'toggle_favourite' recipe.id %}" class="btn {% if is_favorited %}favorited{% endif %}">
-            <i class="fa-solid fa-heart"></i></a>
+            <i class="fa-solid fa-heart"></i>
+          </a>
           <p><strong>{{ favourites_count }}</strong> people have favorited this recipe.</p>
           {% endif %}
         </div>
@@ -45,23 +46,21 @@
   <div class="recipe-container">
     <div class="recipe-left-column">
       <h1 class="recipe-title">Ingredients</h1>
-      <p class="recipe-text">
+      <ul class="recipe-text">
         {% for ingredient in recipe.get_ingredients_list %}
-        <li class="list-group-item d-flexr">
-          {{ ingredient }}
-        </li>
+        <li class="list-group-item d-flex">{{ ingredient }}</li>
         {% endfor %}
-      </p>
+      </ul>
     </div>
     <div class="recipe-right-column">
       <h1 class="recipe-title">Method</h1>
-      <p class="recipe-text">
+      <ol class="recipe-text">
         {% for step in recipe.get_instructions_list %}
         <li class="list-group-item d-flex">
           <div class="ms-2">{{ step }}</div>
         </li>
         {% endfor %}
-      </p>
+      </ol>
     </div>
   </div>
 </div>
@@ -69,13 +68,8 @@
 <!-- Action Buttons -->
 {% if user.is_authenticated and user == recipe.author %}
 <div class="mt-4 d-flex justify-content-center gap-2">
-  <a href="{% url 'edit_recipe' recipe.id %}" class="btn orange-btn">
-      Edit Recipe
-  </a>
-  <a href="{% url 'delete_recipe' recipe.id %}" class="btn red-btn">
-    Delete Recipe
-  </a>
+  <a href="{% url 'edit_recipe' recipe.id %}" class="btn orange-btn">Edit Recipe</a>
+  <a href="{% url 'delete_recipe' recipe.id %}" class="btn red-btn">Delete Recipe</a>
 </div>
 {% endif %}
-
 {% endblock %}
