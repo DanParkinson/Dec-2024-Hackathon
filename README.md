@@ -7,7 +7,7 @@
 ## Introduction
 The present website was done as part of the December Hackathon organised by Code Institute (CI) in 2024.
 The initial idea for the group project was to do a site to show recipes to the users and allow them to also input their recipes on the site.
-The group Jingle Bites was composed of 6 elements, including current students and alumini from different courses by CI.
+The group Jingle Bites was composed of 6 elements, including current students and alumni from different courses by CI.
 
 ## Table of Contents
 - [User Experience Design](#user-experience-design)
@@ -44,13 +44,13 @@ Checking layouts and colours, and ultimatelly basing the website in an existing 
 The site was coded, with attention to the responsiveness in different screens.
 
 ### Project Brief
-The project goal is to provide different Christmas recipes to users, allowing them to add their own recipes and as well as to choose their favourite recipes that they can see/review later.
+The project goal is to provide different Christmas recipes to users, allowing them to add their own recipes and as well as to choose their favourite recipes, that they can see/review later.
 
 The site user's goals for the site are to get information about different Christmas recipes, as the ingredients, preparation and time that takes to prepare it.
 Also being able share their recipes with other users.
 
 ### Users
-In order to fully understand our users needs, we asked Microsoft Co-pilot to draw up some user personas based on our project brief. We refined the prompts and after three tries and some refinement afterwards, here are the personas we used:
+In order to fully understand our users needs, we asked Microsoft Co-pilot to draw up some user personas based on our project brief. We refined the prompts and here are the personas we used:
 
 - Persona 1: "Emily Johnson is a 32-year-old teacher from Leeds"<br>
   She loves discovering new Christmas dessert recipes to make for her family and friends during the holiday season.<br>
@@ -76,8 +76,10 @@ In order to fully understand our users needs, we asked Microsoft Co-pilot to dra
 [Back to top](#top)
 
 ## Project Plan
-Initially the group got together when the team was known after the first webinar. A repository was created and colaborators were adeed to allow different members to create their branches and work locally, as necessary.
-After this, different the repo, a project board was also created on GitHubOn the planning day, the draft user stories were derived with the help of MS Co-pilot, which provided a sufficient and relevant user stories including the acceptance criteria and tasks required for each user story. Some adjustments had to be made, as the scope of some of the user stories didn't fit into the project timeframe
+Initially the group got together when the team was known after the first webinar. A repository was created and colaborators were adeed to allow different members to create their branches and work locally, as necessary.<br>
+After this, a project board was also created on GitHubOn, the draft user stories were done with the help of MS Co-pilot.<br> 
+Co-pilot provided sufficient and relevant user stories including the acceptance criteria and tasks required for each user story. <br>
+Some adjustments had to be made, as the scope of some of the user stories didn't fit into the project timeframe.<br>
 
 ### User Stories
 Here are all the user stories that have been prioritised for the current implementation of the site:
@@ -99,9 +101,9 @@ Here are all the user stories that have been prioritised for the current impleme
 | Print or Save Recipes as PDF                    | could have                | Not Done |
 
 
-All user stories were logged on the [GitHub Project Board](https://github.com/users/Francisca-Heii/projects/7) on GitHub repo, along with the assessment criteria and expected performance for the Hackathon, which were also prioritised as must-have, should-have and could-have.
-
-As well as using the Project Board to track progress on our project, we also used it during testing to log any significant bugs that need to be fixed before the project deadline. These were then assigned and prioritised alongside other issues and user stories.
+All user stories were logged on the [GitHub Project Board](https://github.com/users/Francisca-Heii/projects/7) on GitHub repo, along with the assessment criteria and expected performance for the Hackatho<br>
+There were also prioritised as must-have, should-have and could-have.<br>
+As well as using the Project Board to track progress on our project, we also used it during testing to log any significant bugs that need to be fixed before the project deadline.<br>
 
 <img src="static/images/jingle-bites-project-board.png">
 
@@ -168,18 +170,18 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 ### Homepage
   <img src="static/images/homepage-final.png"><br>
 - In this page the user can choose one of the 4 main categories "Starter, "Main", "Side" or Dessert" to see different recipes according to each category.
-- Also has some recomended recipes below the categories which will get the user to their description once selected.
+- Also has some recomended recipes below the categories which the user can select and will show a description of the selected recipe.
 
 ### About
   <img src="static/images/Homepage-about-1.png"><br>
   <img src="static/images/Homepage-about-2.png"><br>
-- Information about the page.
+- Information about the website.
 
 ### Recipes
   <img src="static/images/recipes-1.png"><br>
   <img src="static/images/recipes-2.png"><br>
 - Has a option menu "All Categories" that allows the user to choose from the categories mentioned above on the homepage and search for recipes.
-- Different recipes are available that the user can open by selecting/clicking in the area of the specific recipe, which slightly pops out to provide a visual output to the user that is ready to go to another page.
+- Different recipes are available, that the user can open by selecting/clicking in the area of the specific recipe, which slightly pops out to provide a visual output to the user that is ready to go to another page.
 
 ### Recipe
   <img src="static/images/recipe-1.png"><br>
@@ -319,10 +321,10 @@ Validation of HTML/CSS, Lighthouse Audits.
 ## Credits
 ### Use of AI
 #### Code Generation
-The GitHub Copilot extension was installed in our local versions of Visual Studio Code. 
+The GitHub Copilot extension was installed in some local versions of Visual Studio Code. 
 
 #### Debugging
-Copilot was used for debugging code. EIther while using VS Code or when using Dev Tools and searching about errors.
+Copilot was used sometimes for debugging code. Either while using VS Code or when using Dev Tools and searching about errors.
 
 ### Acknowledgements
 The team has communicated very well and different members had regular huddles to check about progress of the project, as well as when needed to check code or to resolve conflicts on the code or trying to merge changes to main repo.
