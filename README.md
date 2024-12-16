@@ -27,6 +27,8 @@ The group Jingle Bites was composed of 6 elements, including current students an
     - [Recipe](#recipe)
     - [Register](#register)
     - [Login](#login)
+    - [Profile](#profile)
+    - [New Recipe](#new-recipe)
 - [Responsive Design](#responsive-design)
 - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
@@ -196,6 +198,15 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 ### Login
   <img src="static/images/login.png"><br>
 - Allows the user to access the account created.
+
+### Profile
+  <img src="static/images/profile-view.png"><br>
+- View of the user profile page.
+
+### New Recipe
+  <img src="static/images/new-recipe1.png"><br>
+  <img src="static/images/new-recipe2.png"><br>
+- View of the form to add a new recipe to the website.
 
 [Back to top](#top)
 
