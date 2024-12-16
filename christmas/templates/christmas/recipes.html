@@ -2,12 +2,11 @@
 {% load static %}
 
 {% block content %}
-<h1>SIMPLE RECIPIES MADE FOR<i>"REAL ACTUAL CHRISTMAS SEASON"!</i></h1>
+<h1>SIMPLE RECIPES MADE FOR<i>"REAL ACTUAL CHRISTMAS SEASON"!</i></h1>
 
 <!-- Hero Image -->
 <section class="card-section">
     <div class="new-card-container">
-        <!-- New Card at the top with only image -->
         <div class="top-card new-card">
             <div class="card-content">
                 <img src="{% static 'images/first-Container-imge.jpeg' %}" alt="New Card Image" />
@@ -16,30 +15,23 @@
     </div>
 </section>
 
-<!-- search bar not functioning-->
+<!-- Search bar -->
 <section>
     <div class="container mt-4">
-        <!-- Category and Search Form -->
         <form class="row g-3 align-items-center" method="GET" action="{% url 'recipes' %}">
-            <!-- Dropdown Menu for Categories -->
             <div class="col-auto">
                 <select class="form-select" id="categoryDropdown" name="category">
                     <option value="">All Categories</option>
                     {% for category_value, category_label in category_choices %}
                     <option value="{{ category_value }}" {% if current_category == category_value %}selected{% endif %}>
-                    {{ category_label }}
+                        {{ category_label }}
                     </option>
                     {% endfor %}
                 </select>
             </div>
-
-            <!-- Search Input -->
             <div class="col-auto">
-                <input type="text" class="form-control" name="q" placeholder="Search recipes..."
-                    value="{{ search_term|default:'' }}">
+                <input type="text" class="form-control" name="q" placeholder="Search recipes..." value="{{ search_term|default:'' }}">
             </div>
-
-            <!-- Submit Button -->
             <div class="col-auto">
                 <button type="submit" class="btn orange-btn">
                     <span class="icon">
@@ -48,7 +40,6 @@
                     Search
                 </button>
             </div>
-
             {% if search_term or current_category %}
             <div class="col-auto">
                 <a href="{% url 'recipes' %}" class="btn gray-btn">Reset</a>
@@ -58,7 +49,7 @@
     </div>
 </section>
 
-<!-- recipes displayed from database -->
+<!-- Recipes displayed from database -->
 <div class="container mt-4">
     {% if no_results %}
     <div class="row">
@@ -67,39 +58,67 @@
                 No recipes found. Try adjusting your search criteria.
             </h4>
         </div>
-        {% else %}
-        <div class="row">
-            {% for recipe in recipes %}
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card h-100 recipe-card">
-                    <a href="{% url 'recipe_detail' recipe.id %}">
-                        <div class="card-body text-center recipe-card-body">
-                            {% if recipe.image %}
-                            <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-3">
-                            {% else %}
-                            <p>No image available.</p>
-                            {% endif %}
-                            <h3 class="card-title">{{ recipe.title }}</h3>
-                            <div class="card-details mt-2 justify-content-center">
-                                <i class="fas fa-users"></i>
-                                <span>{{ recipe.servings }}</span>
-                                <i class="fas fa-clock ms-3"></i>
-                                <span>{{ recipe.cooking_time }}</span>
-                                {% if user.is_authenticated %}
-                                <a href="{% url 'toggle_favourite' recipe.id %}" class="btn {% if recipe.is_favorited %}favorited{% endif %}">
-                                    <i class="fa-solid fa-heart"></i>
-                                </a>
-                                <strong>{{ recipe.favourites_count }}</strong>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% endif %}
     </div>
+    {% else %}
+    <div class="row">
+        {% for recipe in recipes %}
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card h-100 recipe-card">
+                <a href="{% url 'recipe_detail' recipe.id %}">
+                    <div class="card-body text-center recipe-card-body">
+                        {% if recipe.image %}
+                        <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="img-fluid mb-3">
+                        {% else %}
+                        <p>No image available.</p>
+                        {% endif %}
+                        <h3 class="card-title">{{ recipe.title }}</h3>
+                        <div class="card-details mt-2 justify-content-center">
+                            <i class="fas fa-users"></i>
+                            <span>{{ recipe.servings }}</span>
+                            <i class="fas fa-clock ms-3"></i>
+                            <span>{{ recipe.cooking_time }}</span>
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'toggle_favourite' recipe.id %}" class="btn {% if recipe.is_favorited %}favorited{% endif %}">
+                                <i class="fa-solid fa-heart"></i>
+                            </a>
+                            <strong>{{ recipe.favourites_count }}</strong>
+                            {% endif %}
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination Controls -->
+    <div class="pagination">
+        <span class="step-links">
+            {% if recipes.has_previous %}
+            <a href="?page=1{% if search_term %}&q={{ search_term }}{% endif %}{% if current_category %}&category={{ current_category }}{% endif %}">
+                First
+            </a>
+            <a href="?page={{ recipes.previous_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_category %}&category={{ current_category }}{% endif %}">
+                Previous
+            </a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ recipes.number }} of {{ recipes.paginator.num_pages }}.
+            </span>
+
+            {% if recipes.has_next %}
+            <a href="?page={{ recipes.next_page_number }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_category %}&category={{ current_category }}{% endif %}">
+                Next
+            </a>
+            <a href="?page={{ recipes.paginator.num_pages }}{% if search_term %}&q={{ search_term }}{% endif %}{% if current_category %}&category={{ current_category }}{% endif %}">
+                Last
+            </a>
+            {% endif %}
+        </span>
+    </div>
+    {% endif %}
+</div>
 
 {% endblock %}
 
