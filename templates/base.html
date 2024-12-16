@@ -15,7 +15,7 @@
     {% block extra_meta %}
     {% endblock %}
 
-    <title>Document {% block extra_title %}{% endblock %}</title>
+    <title>Jingle Bites {% block extra_title %}{% endblock %}</title>
 
     {% block corecss %}
       <!-- Bootstrap link -->
@@ -68,9 +68,9 @@
               </div>
               <div class="navbar-nav ms-auto">
                   {% if user.is_authenticated %}
-                  <span class="nav-item navbar-text me-3">
-                    Welcome, {{ user.username }}!
-                </span>
+                    <span class="nav-item navbar-text me-3">
+                        Welcome, {{ user.username }}!
+                    </span>
                       <a class="nav-item nav-link {% if request.path == logout_url %}active{% endif %}" 
                           aria-current="page" 
                           href="{% url 'account_logout' %}">
