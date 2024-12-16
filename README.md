@@ -299,7 +299,7 @@ Validation of HTML/CSS, Lighthouse Audits.
 
 ### CSS Validation
 
-- Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
+- Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found on all pages for style.
 ![CSS_validation](static/images/base-css-validation.png)
 
 [Back to top](#top)
