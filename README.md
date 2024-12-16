@@ -319,31 +319,32 @@ Validation of HTML/CSS, Lighthouse Audits.
 [Back to top](#top)
 
 ### Lighthouse Audit
-- Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility. <br>
-Home<br>
+Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility. <br>
+
+- Home<br>
 <img src="static/images/Homepage-lighthouse-performance.png">
 
-About<br>
+- About<br>
 <img src="static/images/about-lighthouse-performance.png">
 
-Recipes<br>
+- Recipes<br>
 <img src="static/images/recipes-lighthouse-performance.png">
 
-Recipe<br>
+- Recipe<br>
 <img src="static/images/recipe-lighthouse-performance.png">
 
 [Back to top](#top)
 
-Signup<br>
+- Signup<br>
 <img src="static/images/signup-lighthouse-performance.png">
 
-Login<br>
+- Login<br>
 <img src="static/images/login-lighthouse-performance.png">
 
-Profile<br>
+- Profile<br>
 <img src="static/images/profile-lighthouse-performance.png">
 
-New Recipe<br>
+- New Recipe<br>
 <img src="static/images/new-recipe-lighthouse-performance.png">
 
 ### Python Testing
