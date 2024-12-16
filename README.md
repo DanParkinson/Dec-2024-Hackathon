@@ -35,7 +35,7 @@ The group Jingle Bites was composed of 6 elements, including current students an
 - [Credits](#credits)
     - [Use of AI](#use-of-ai)
     - [Acknowledgements](#acknowledgements)
-    - [Gorup Members](#group-members)
+    - [Group Members](#group-members)
 
 [Back to top](#top)
 
