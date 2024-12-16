@@ -189,8 +189,7 @@ For the Title, font-family was: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
 - Different recipes are available, that the user can open by selecting/clicking in the area of the specific recipe, which slightly pops out to provide a visual output to the user that is ready to go to another page.
 
 ### Recipe
-  <img src="static/images/recipe-1.png"><br>
-  <img src="static/images/recipe-2.png"><br>
+  <img src="static/images/recipe-details.png"><br>
 - Description of the recipe selected: title, brief description, ingredients, how to prepare the recipe and how many users liked the recipe.
 
 ### Register
