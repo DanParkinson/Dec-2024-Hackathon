@@ -320,12 +320,31 @@ Validation of HTML/CSS, Lighthouse Audits.
 
 ### Lighthouse Audit
 - Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility. <br>
+Home<br>
 <img src="static/images/Homepage-lighthouse-performance.png">
+
+About<br>
 <img src="static/images/about-lighthouse-performance.png">
+
+Recipes<br>
 <img src="static/images/recipes-lighthouse-performance.png">
+
+Recipe<br>
 <img src="static/images/recipe-lighthouse-performance.png">
+
+[Back to top](#top)
+
+Signup<br>
 <img src="static/images/signup-lighthouse-performance.png">
+
+Login<br>
 <img src="static/images/login-lighthouse-performance.png">
+
+Profile<br>
+<img src="static/images/profile-lighthouse-performance.png">
+
+New Recipe<br>
+<img src="static/images/new-recipe-lighthouse-performance.png">
 
 ### Python Testing
 - No errors shown while testing and the automatically generated migrations don’t require any changes. <br>
